@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background: url(../../assets/img/Fondo_Pantalla\ de\ bienvenida.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

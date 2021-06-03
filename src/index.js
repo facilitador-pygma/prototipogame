@@ -9,6 +9,9 @@ import ReactDOM from 'react-dom';
 //Componentes
 import App from './App';
 
+//Estilos
+import './assets/estilos/estilos.css';
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

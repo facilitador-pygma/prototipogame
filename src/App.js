@@ -5,11 +5,13 @@
 //Propios de React
 import React from 'react';
 
+//Creadas
+import EscenaInicio from './componentes/inicio/EscenaInicio';
+
 const App = () =>{
   return(
     <>
-    
-      <h2>Hola mundo</h2>
+      <EscenaInicio />
 
     </>
   );
