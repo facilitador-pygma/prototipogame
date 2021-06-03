@@ -12,6 +12,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     
     background: url(../../assets/img/Fondo_Pantalla\ de\ bienvenida.png);
     background-position: center;

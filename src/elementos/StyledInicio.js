@@ -6,8 +6,9 @@ import styled, { css } from 'styled-components';
 
 const Marco = styled.div`
     position: relative;
-    width: 80%;
-    height: 300px;
+    max-width: 90%;
+    width: 1000px;
+    height: 400px;
 
     display: flex;
     justify-content: center;
@@ -27,12 +28,12 @@ const Marco = styled.div`
 
     &::before{
         position: absolute;
-        top: -16px;
+        top: -14px;
         left: 50%; /*Corre la capa un 50% a la derecha*/
         transform: translateX(-50%); /*Ayuda a centrar la capa*/
         content: '';
-        height: 15px;
-        width: 50vw; /*600px*/
+        height: 13px;
+        width: 60vw;
 
         border-top: 1px solid rgba(255, 255, 255, 0.5);
         border-left: 1px solid rgba(255, 255, 255, 0.5);
@@ -50,7 +51,7 @@ const Marco = styled.div`
         transform: translateX(-50%); /*Ayuda a centrar la capa*/
         content: '';
         height: 10px;
-        width: 20vw; /*200px*/
+        width: 20vw;
 
         border-top: 1px solid #350048; /*Si no se pone queda visualizando una linea blanca del borde de .marco */
         border-bottom: 1px solid rgba(255, 255, 255, 0.5);
@@ -63,7 +64,7 @@ const Marco = styled.div`
 `;
 
 const Barra = styled.div`
-    width: 45vw;
+    width: 55vw;
     height: 5px;
     position: absolute;
     top: -2.5px;
@@ -133,10 +134,56 @@ const Circulos = styled.span`
 `;
 
 const ContenidoMarco = styled.div`
+    position:relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     width: 96%;
-    height: 90%;
+    height: 91%;
+
     background: darkorange;
     border-radius: 10px;
+`;
+
+const BoxImgFooter = styled.div`
+    position: absolute;
+    width: 100%; 
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+`;
+
+const ImgFooter = styled.img`
+    position: relative;
+    width: 100%;    
+    object-fit: cover;
+`;
+
+const ContenedorTextoFooter = styled.span`
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px 0px;
+
+    text-transform: uppercase;
+`;
+
+const TextoFooter = styled.p`
+    text-align: center;
+    color: #fff;
+    font-size: 2em;
+    letter-spacing: 1px;
+`;
+
+const TextoFooter2 = styled.span`
+    font-size: 0.8em;
 `;
 
 
@@ -144,4 +191,9 @@ export { Marco,
          Barra,
          ContenedorCirculos,
          Circulos,
-         ContenidoMarco };
+         ContenidoMarco,
+         BoxImgFooter,
+         ImgFooter,
+         ContenedorTextoFooter,
+         TextoFooter,
+         TextoFooter2 };

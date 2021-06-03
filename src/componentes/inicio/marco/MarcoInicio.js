@@ -5,6 +5,9 @@
 //Propios de React
 import React from 'react';
 
+//Imagenes
+import logoInicio from '../../../assets/img/Logo_Pantalla_de_bienvenida.png';
+
 //Elementos
 import { Marco,
          Barra,
@@ -16,13 +19,15 @@ const MarcoInicio = () =>{
     return(
       <>
         <Marco> {/*Es un div, se usa los estilos del elemento StyledInicio.js*/}
+
             <Barra></Barra> {/*Es un div, se usa los estilos del elemento StyledInicio.js*/}
 
-            <ContenidoMarco>
-               <h3>Holamundo</h3>
+            <ContenidoMarco> {/*Es un div, se usa los estilos del elemento StyledInicio.js*/}
+               {/*<img src={logoInicio}/>*/}
             </ContenidoMarco> 
                     
             <ContenedorCirculos> {/*Es un div, se usa los estilos del elemento StyledInicio.js*/}
+
                 <Circulos></Circulos>
                 <Circulos></Circulos>
                 <Circulos></Circulos>
@@ -30,6 +35,7 @@ const MarcoInicio = () =>{
                 <Circulos></Circulos>
                 <Circulos></Circulos>
                 <Circulos></Circulos>
+                
             </ContenedorCirculos>
                     
             </Marco>
