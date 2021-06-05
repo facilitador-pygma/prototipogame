@@ -13,13 +13,13 @@ import { Marco,
          Barra,
          ContenedorCirculos,
          Circulos,
-         ContenidoMarco } from '../../../elementos/StyledInicio';
+         ContenidoMarco } from '../../../elementos/StyledLanding';
 
-const MarcoInicio = ( {estado, cambiarEstado} ) => {
+const MarcoInicio = ( {estadoMarco, cambiarEstadoMarco} ) => {
 
     const pasarEscenaUsuarios = () => {
-      cambiarEstado( {...estado, landing: 'false', usuarios: 'true'} );
-      console.log('cambiando estado');
+      cambiarEstadoMarco( {...estadoMarco, landing: 'false', usuarios: 'true'} );
+      console.log('cambiando estado desde el marco del landing');
     }
 
     return(
