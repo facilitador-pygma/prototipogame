@@ -6,19 +6,16 @@
 import React from 'react';
 
 //Creadas
-import FormRegistro from './registro/formregistro/FormRegistro';
+import LogoG4T from './../logog4t/LogoG4T';
 
-const EscenaUsuarios = () => {
+const FormRegistro = () => {
 
     return(
         <>
-
-            <main>
-                <FormRegistro />
-            </main>
+            <LogoG4T />
             
         </>
     );
 }  
     
-export default EscenaUsuarios;
+export default FormRegistro;
