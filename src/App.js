@@ -11,7 +11,8 @@ import EscenaInicio from './componentes/inicio/EscenaInicio';
 const App = () =>{
   return(
     <>
-      <EscenaInicio />
+      {false &&
+      <EscenaInicio />}
 
     </>
   );

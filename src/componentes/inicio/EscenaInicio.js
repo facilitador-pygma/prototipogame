@@ -12,11 +12,11 @@ import Footer from '../Footer/Footer';
 const EscenaInicio = () =>{
     return(
       <>
+      
         <section>
             <MarcoInicio />
             <Footer />
-        </section>
-        
+        </section>        
   
       </>
     );

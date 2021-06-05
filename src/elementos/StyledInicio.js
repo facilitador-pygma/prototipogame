@@ -147,7 +147,7 @@ const ContenidoMarco = styled.div`
     border-radius: 10px;
 `;
 
-const BoxImgFooter = styled.div`
+const BoxFooter = styled.div`
     position: absolute;
     width: 100%; 
     bottom: 0;
@@ -192,7 +192,7 @@ export { Marco,
          ContenedorCirculos,
          Circulos,
          ContenidoMarco,
-         BoxImgFooter,
+         BoxFooter,
          ImgFooter,
          ContenedorTextoFooter,
          TextoFooter,

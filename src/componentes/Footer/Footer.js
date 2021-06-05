@@ -6,7 +6,7 @@
 import React from 'react';
 
 //Creadas
-import { BoxImgFooter,
+import { BoxFooter,
          ImgFooter,
          ContenedorTextoFooter,
          TextoFooter,
@@ -21,14 +21,14 @@ const Footer = () => {
 
     return(
         <>
-            <BoxImgFooter>
+            <BoxFooter>
                 <ImgFooter src= {imgFooter}/>
-                <ContenedorTextoFooter> 
-                    <TextoFooter>!bienvenidos!<br/>
-                        <TextoFooter2>edi sera tu gran aliado para potenciar tu talento en la industria 4.0</TextoFooter2>
+                <ContenedorTextoFooter> {/*Es un span, se usa los estilos del elemento StyledInicio.js*/}
+                    <TextoFooter>!bienvenidos!<br/> {/*Es un p, se usa los estilos del elemento StyledInicio.js*/}
+                        <TextoFooter2>edi sera tu gran aliado para potenciar tu talento en la industria 4.0</TextoFooter2>{/*Es un span, se usa los estilos del elemento StyledInicio.js*/}
                     </TextoFooter>
                 </ContenedorTextoFooter>
-            </BoxImgFooter>
+            </BoxFooter>
             
         </>
     );
