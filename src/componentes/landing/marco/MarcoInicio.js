@@ -15,14 +15,20 @@ import { Marco,
          Circulos,
          ContenidoMarco } from '../../../elementos/StyledInicio';
 
-const MarcoInicio = () =>{
+const MarcoInicio = ( {estado, cambiarEstado} ) => {
+
+    const pasarEscenaUsuarios = () => {
+      cambiarEstado( {...estado, landing: 'false', usuarios: 'true'} );
+      console.log('cambiando estado');
+    }
+
     return(
       <>
         <Marco> {/*Es un div, se usa los estilos del elemento StyledInicio.js*/}
 
             <Barra></Barra> {/*Es un div, se usa los estilos del elemento StyledInicio.js*/}
 
-            <ContenidoMarco> {/*Es un div, se usa los estilos del elemento StyledInicio.js*/}
+            <ContenidoMarco onClick= {pasarEscenaUsuarios}> {/*Es un div, se usa los estilos del elemento StyledInicio.js*/}
                {/*<img src={logoInicio}/>*/}
             </ContenidoMarco> 
                     
@@ -45,4 +51,4 @@ const MarcoInicio = () =>{
     );
   }  
   
-  export default MarcoInicio;
+export default MarcoInicio;

@@ -10,7 +10,7 @@ import { BoxFooter,
          ImgFooter,
          ContenedorTextoFooter,
          TextoFooter,
-         TextoFooter2 } from '../../elementos/StyledInicio';
+         TextoFooter2 } from '../../elementos/StyledFooter';
 
 //Imagenes
 import imgFooter from '../../assets/img/Mensaje_Mapa.png';

@@ -3,16 +3,34 @@
 /**************************************/
 
 //Propios de React
-import React from 'react';
+import React, {useState} from 'react';
 
 //Creadas
-import EscenaInicio from './componentes/inicio/EscenaInicio';
+import EscenaLanding from './componentes/landing/EscenaLanding';
+import EscenaUsuarios from './componentes/usuarios/EscenaUsuarios';
 
 const App = () =>{
+
+  //Variables de estados
+  const [escenasJuego, cambiarEscenasJuego] = useState ({ landing: 'true',
+                                                          usuarios: null,
+                                                          home: null });
+
+  
   return(
     <>
-      {false &&
-      <EscenaInicio />}
+      { escenasJuego.landing === 'true' &&
+        <EscenaLanding 
+          estado= {escenasJuego}
+          cambiarEstado= {cambiarEscenasJuego}
+        />
+      }
+
+      { escenasJuego.landing === 'false' &&
+        escenasJuego.usuarios === 'true' &&
+        
+        <EscenaUsuarios />
+      }
 
     </>
   );
