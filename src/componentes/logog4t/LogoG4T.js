@@ -6,7 +6,7 @@
 import React from 'react';
 
 //Imagenes
-import logoG4T from './../../../../assets/img/Logo_registro.png'
+import logoG4T from './../../assets/img/Logo_registro.png'
 
 //Elementos
 import { MarcoLogoG4T,
@@ -14,7 +14,7 @@ import { MarcoLogoG4T,
          GuionesLogoG4T,
          ContenedorLineasInfG4T,
          ContenidoMarcoLogoG4T,
-         ImgLogoG4T } from './../../../../elementos/StyledLogoG4T';
+         ImgLogoG4T } from './../../elementos/StyledLogoG4T';
 
 
 const LogoG4T = () => {

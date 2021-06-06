@@ -17,7 +17,8 @@ import { Marco,
 
 const MarcoInicio = ( {estadoMarco, cambiarEstadoMarco} ) => {
 
-    const pasarEscenaUsuarios = () => {
+    const pasarEscenaUsuarios = (e) => {
+      e.stopPropagation();
       cambiarEstadoMarco( {...estadoMarco, landing: 'false', usuarios: 'true'} );
       console.log('cambiando estado desde el marco del landing');
     }

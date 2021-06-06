@@ -57,7 +57,7 @@ const MarcoLogoG4T = styled.div`
 `;
 
 const ContenedorLineasSupG4T = styled.div` /*Contenedor para las lineas superiores del logoG4T*/
-    width: 23vw;
+    width: 20vw;
     height: 5px;
 
     position: absolute;
@@ -72,7 +72,7 @@ const ContenedorLineasSupG4T = styled.div` /*Contenedor para las lineas superior
 `;
 
 const ContenedorLineasInfG4T = styled.div` /*Contenedor para las lineas superiores del logoG4T*/
-    width: 23vw;
+    width: 20vw;
     height: 5px;
 
     position: absolute;
