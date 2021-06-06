@@ -8,6 +8,7 @@ import React, {useState} from 'react';
 //Creadas
 import EscenaLanding from './componentes/landing/EscenaLanding';
 import EscenaUsuarios from './componentes/usuarios/EscenaUsuarios';
+import EscenaHome from './componentes/home/EscenaHome';
 
 const App = () =>{
 
@@ -29,8 +30,20 @@ const App = () =>{
       { escenasJuego.landing === 'false' &&
         escenasJuego.usuarios === 'true' &&
         
-        <EscenaUsuarios />
+        <EscenaUsuarios 
+          estado= {escenasJuego}
+          cambiarEstado= {cambiarEscenasJuego}
+        />
       }
+
+      { escenasJuego.landing === 'false' &&
+        escenasJuego.usuarios === 'false' &&
+        escenasJuego.home === 'true' &&
+              
+        <EscenaHome />
+      }
+
+
 
     </>
   );

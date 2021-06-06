@@ -21,7 +21,7 @@ const Footer = () => {
 
     return(
         <>
-            <BoxFooter>
+            <BoxFooter> {/*Es un elemneto div, padre de la imagen del footer y el texto */}
                 <ImgFooter src= {imgFooter}/>
                 <ContenedorTextoFooter> {/*Es un span, se usa los estilos del elemento StyledInicio.js*/}
                     <TextoFooter>!bienvenidos!<br/> {/*Es un p, se usa los estilos del elemento StyledInicio.js*/}

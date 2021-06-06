@@ -6,7 +6,7 @@
 import React, { useState } from 'react';
 
 //Componentes
-import Inputs from './../../Inputs';
+import Inputs from '../Inputs';
 
 //Iconos
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -14,12 +14,12 @@ import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 
 //Creadas
 import { BoxFormulario,
-         TituloFormulario,
+         TituloFormularioRegistro,
          Formulario,
          BoxBotonFormulario,
          BotonFormulario,
          MensajeError,
-         MensajeExito } from './../../../../elementos/StyledFormularios';
+         MensajeExito } from '../../../elementos/StyledFormularios';
 
 
 
@@ -72,7 +72,7 @@ const FormRegistro = () => {
         <>
             <BoxFormulario> {/*Es un elemento div, padre del formulario*/}
 
-                <TituloFormulario>Registro</TituloFormulario> {/*Es un elemento p*/}
+                <TituloFormularioRegistro>Registro</TituloFormularioRegistro> {/*Es un elemento p*/}
 
                 <Formulario onSubmit= {onSubmitRegistro}> {/*Es un elemento form, padre de los inputs, mensaje de error y el boton submit */}
                                                           {/*onSubmit=""--> cuando se de click en boton Registrar se ejecuta una funcion */}
@@ -124,7 +124,7 @@ const FormRegistro = () => {
                                 <b>Error: </b>Faltan campos del formulario de registro por diligenciar
                             </p>
                         </MensajeError>
-                    }
+                    } {/*Segun el valor que tenga este estado muestra un mensaje de error */}
 
                     <BoxBotonFormulario> {/*Es un elemento div, padre de boton y mensaje de exito */}
 
@@ -132,9 +132,11 @@ const FormRegistro = () => {
 
                         { formularioRegistroValido === true &&
 
-                            <MensajeExito>El registro se envio con exito</MensajeExito>
+                            <MensajeExito> {/*Es un elemento p*/}
+                                El registro se envio con exito
+                            </MensajeExito>
                             
-                        } {/*Es un elemento p */}
+                        } {/* Segun el valor que tenga este estado muestra un mensaje de exito */}
 
                     </BoxBotonFormulario>
 

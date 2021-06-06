@@ -6,7 +6,7 @@
 import React from 'react';
 
 //Instaladas
-import { faTimesCircle, faCheckCircle, faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faTimesCircle, faCheckCircle, faUser, faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
 
 //Creadas
 import { Label,
@@ -32,7 +32,7 @@ const Inputs = ( { estadoInput, cambiarEstadoInput, tipo, label, placeholder, na
 
     //Defincion de la funcion validacion
     const validacion = () => {
-        //Primero verifica si se envia la prop de expresionRegular en el componenteinput
+        //Primero verifica si se envia la prop de expresionRegular en el Inputs desde FormRegistro
       if(expresionRegular){
 
         if(expresionRegular.test(estadoInput.campo)){ //test() --> comprueba un valor almacenado contra la formula , en este caso comprueba la guardado por teclado y lo compara con una expresionRegular
@@ -63,7 +63,7 @@ const Inputs = ( { estadoInput, cambiarEstadoInput, tipo, label, placeholder, na
 
                 <GrupoInput> {/*Es un elemento div con posicionamiento relativo encierra los iconos y el input; esto para trabajar los iconos dentro del input con un posicionamiento absoluto*/}
 
-                    <IconoInput icon={ tipo !== 'text' ? faEnvelope : faUser } />
+                    <IconoInput icon={ tipo === 'text' ? faUser : tipo === 'email' ? faEnvelope : faLock } /> {/*Selecciona el icono del input dependiendo del tipo*/}
 
                     <Input 
                         type={tipo} 
@@ -78,7 +78,7 @@ const Inputs = ( { estadoInput, cambiarEstadoInput, tipo, label, placeholder, na
 
                         valido= {estadoInput.valido}
 
-                    /> {/*Es un elemento input */}
+                    /> {/*Es un elemento input reutilizable*/}
                        {/*value me permite guardar en el estado lo ingresado por teclado en los inputs
                            onChange, tendra una funcion para cambiar el estado del input y mostrarlo
                            onKeyUp, evento cuando se suelta una tecla despeusde haberla presionado
@@ -87,15 +87,15 @@ const Inputs = ( { estadoInput, cambiarEstadoInput, tipo, label, placeholder, na
                         */}
 
                     <IconoValidacion 
-                        icon={ estadoInput.valido === 'true' ? faCheckCircle : faTimesCircle }
-                        valido= {estadoInput.valido} 
-                    
-                    /> {/*valido, es un propiedad que me permite cambiar los iconos de validacion y el color segun sea falso o verdadera*/}
+                        icon={ estadoInput.valido === 'true' ? faCheckCircle : faTimesCircle } 
+                        valido= {estadoInput.valido}
+                    /> {/*Selecciona el icono del input dependiendo de la validacion*/}
+                        {/*valido, es un propiedad que me permite cambiar los iconos de validacion y el color segun sea falso o verdadera*/}
 
                 </GrupoInput>
 
                 <LeyendaError valido= {estadoInput.valido}>{leyendaError}</LeyendaError> {/*Es un elemento p 
-                                                                                            valido, es un propiedad que me permite cambiar el color del label segun sea falso o verdadera*/}
+                                                                                            valido, es un propiedad que me permite cambiar el color del parrafo segun sea falso o verdadera*/}
 
             </div>
             

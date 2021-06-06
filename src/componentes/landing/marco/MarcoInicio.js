@@ -15,11 +15,12 @@ import { Marco,
          Circulos,
          ContenidoMarco } from '../../../elementos/StyledLanding';
 
-const MarcoInicio = ( {estadoMarco, cambiarEstadoMarco} ) => {
+const MarcoInicio = ( {estadoMarco, cambiarEstadoMarco} ) => {  //Se heredan los props para saber en donde se da el paso de escena al home
 
+    //Define la funcion pasarEscenaUsuarios
     const pasarEscenaUsuarios = (e) => {
-      e.stopPropagation();
-      cambiarEstadoMarco( {...estadoMarco, landing: 'false', usuarios: 'true'} );
+      e.stopPropagation(); //Detiene efecto burbuja si se presenta
+      cambiarEstadoMarco( {...estadoMarco, landing: 'false', usuarios: 'true'} ); //Cambia el estado de la escenas en App.js
       console.log('cambiando estado desde el marco del landing');
     }
 
