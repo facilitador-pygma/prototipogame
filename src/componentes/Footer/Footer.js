@@ -21,6 +21,10 @@ const Footer = () => {
 
     return(
         <>
+            {/*<footer>
+                <h3>hola aqui footer</h3>
+            </footer>*/}
+
             <BoxFooter> {/*Es un elemneto div, padre de la imagen del footer y el texto */}
                 <ImgFooter src= {imgFooter}/>
                 <ContenedorTextoFooter> {/*Es un span, se usa los estilos del elemento StyledInicio.js*/}
@@ -29,6 +33,8 @@ const Footer = () => {
                     </TextoFooter>
                 </ContenedorTextoFooter>
             </BoxFooter>
+
+            
             
         </>
     );

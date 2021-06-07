@@ -6,8 +6,7 @@ import styled, { css } from 'styled-components';
 
 const Marco = styled.div`
     position: relative;
-    max-width: 90%;
-    width: 1000px;
+    width: 80%;
     height: 400px;
 
     display: flex;
@@ -24,7 +23,7 @@ const Marco = styled.div`
 
     -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, transparent, #0004);
 
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 
     &::before{
         position: absolute;
@@ -60,6 +59,10 @@ const Marco = styled.div`
         border-bottom-right-radius: 18px;
 
         background: #350048;
+        }
+
+        @media (max-width:800px){
+            margin-bottom: 50px;
         }
 `;
 

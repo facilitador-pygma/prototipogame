@@ -12,7 +12,7 @@ const BoxFooter = styled.div`
 
     display: flex; /*Centra todo el contenido de este div */
     justify-content: center;
-    align-items: center;    
+    align-items: center;
 `;
 
 const ImgFooter = styled.img`

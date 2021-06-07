@@ -10,9 +10,9 @@ const EscenaHome= () => {
 
     return(
         <>
-
-            <h2>Empieza escena home</h2>
-
+            <section>
+                <h2>Empieza escena home</h2>
+            </section>
         </>
     );
 }  

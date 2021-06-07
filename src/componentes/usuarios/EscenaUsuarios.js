@@ -15,22 +15,25 @@ const EscenaUsuarios = ({estado, cambiarEstado}) => { //Se anexan props para sab
 
     return(
         <>
+            <section>
 
-            <main> {/* Etiqueta con estilos en estilos.css*/}
-            
-                { false &&
-                    <LogoG4T />
-                }
-
-                <FormRegistro /> {/*Se llama el componente de FormRegistro.js*/}
-
-                <FormIngreso
-                    estadoFormIngreso= {estado}
-                    cambiarEstadoFormIngreso= {cambiarEstado}                
-                /> {/*Se llama el componente de FormIngreso.js, ademas de anexan alli los props de cambio de escena ya que el 
-                      usuario debe dar click en el submit de Ingreso (datos corectos del form)*/}
+                <main> {/* Etiqueta con estilos en estilos.css*/}
                 
-            </main>
+                    { false &&
+                        <LogoG4T />
+                    }
+
+                    <FormRegistro /> {/*Se llama el componente de FormRegistro.js*/}
+
+                    <FormIngreso
+                        estadoFormIngreso= {estado}
+                        cambiarEstadoFormIngreso= {cambiarEstado}                
+                    /> {/*Se llama el componente de FormIngreso.js, ademas de anexan alli los props de cambio de escena ya que el 
+                        usuario debe dar click en el submit de Ingreso (datos corectos del form)*/}
+                    
+                </main>
+
+            </section>
             
         </>
     );

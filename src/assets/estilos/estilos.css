@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body{ /*El fondo de pantalla no cambia cuando se pasan las escenas se escoge el body como elemento general*/
+section{ /*El fondo de pantalla no cambia cuando se pasan las escenas se escoge el body como elemento general*/
     position: relative;
     min-height: 100vh; /*Se da una altura minima a trabajar dentro del body*/
     width: 100%; /*Se trabaja con todo el ancho del body*/
@@ -12,6 +12,8 @@ body{ /*El fondo de pantalla no cambia cuando se pasan las escenas se escoge el 
     display: flex; /*Esta linea se usa junto con las siguientes dos para centrar en la mitad de la pantalla los componetes hijos*/
     justify-content: center;
     align-items: center;
+
+    flex-direction: column;
 
     background: url(../../assets/img/Fondo_Pantalla\ de\ bienvenida.png); /*Se carga la imagen de fondo en el body*/
     background-position: center; /*las tres lineas restantes ayuda a proporcionar una mejor ubicacion de la imagen*/
@@ -21,12 +23,13 @@ body{ /*El fondo de pantalla no cambia cuando se pasan las escenas se escoge el 
     /*overflow: hidden;*/
 }
 
-section{ /*Se trabaja el section en la escena del landing, */
-    display: flex; /*Esta linea se usa junto con las siguientes dos para centrar en la mitad de la pantalla los componetes hijos*/
+/*section{
+    width: 90%;
+    display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /*Coloca lo componentes hijos uno debajo de otro*/
-}
+    flex-direction: column; 
+}*/
 
 main{ /*Se trabaja el main en la escena de los usuarios, */
     position: relative;
@@ -40,6 +43,24 @@ main{ /*Se trabaja el main en la escena de los usuarios, */
     padding: 50px 0 30px; /*Espaciado interno del main*/
 }
 
+/*footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width:100%;
+    min-height: 77px;
+
+    background: url(../../assets/img/Mensaje_Mapa.png); 
+    background-position: center; 
+    background-size: cover;
+    background-repeat: no-repeat;
+}*/
+
 
 /************************************/
 /********** Media Queries ***********/
@@ -48,4 +69,8 @@ main{ /*Se trabaja el main en la escena de los usuarios, */
     main{
         display: grid;
     }
+
+    /*footer{
+        min-height: 60px;
+    }*/
 }

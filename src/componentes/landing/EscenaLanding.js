@@ -21,7 +21,8 @@ const EscenaLanding = ({estado, cambiarEstado}) => { //Se anexan props para sabe
                 cambiarEstadoMarco= {cambiarEstado}
               /> {/*Se llama al componente de MarcoInicio, se heredan las props de App.js*/}
 
-              <Footer /> {/*Se llama al componente de Footer.js*/}
+             
+              <Footer /> {/*Se llama al componente de Footer.js*/}               
 
           </section>   
   
