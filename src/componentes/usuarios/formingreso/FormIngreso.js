@@ -12,6 +12,10 @@ import Inputs from './../Inputs';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 
+//Imagenes
+import logoG4T from './../../../assets/img/Logo_registro.png';
+import logoEmpresa from './../../../assets/img/Logo_LoginyRegistro.png';
+
 //Creadas
 import { BoxFormulario,
          TituloFormularioLogin,
@@ -19,7 +23,10 @@ import { BoxFormulario,
          BoxBotonFormulario,
          BotonFormulario,
          MensajeError,
-         MensajeExito } from './../../../elementos/StyledFormularios';
+         MensajeExito,
+         BoxImgLogin,
+         ImgsFormularios,
+         BoxImgLogoEmpresa } from './../../../elementos/StyledFormularios';
 
 
 
@@ -70,9 +77,15 @@ const FormIngreso = ( {estadoFormIngreso, cambiarEstadoFormIngreso} ) => { //Se 
     return(
 
         <>
-            <BoxFormulario> {/*Es un elemento div, padre del formulario*/}
+            <BoxFormulario> {/*Es un elemento div, padre del formulario, titulo e imagen*/}
 
                 <TituloFormularioLogin>Login</TituloFormularioLogin> {/*Es un elemento p*/}
+
+                <BoxImgLogin> {/*Es un elemento div*/}
+                    
+                    <ImgsFormularios src={logoG4T}/>
+
+                </BoxImgLogin>
 
                 <Formulario onSubmit= {onSubmitLogin}> {/*Es un elemento form, padre de los inputs, mensaje de error y el boton submit */}
                                                         {/*onSubmit=""--> cuando se de click en boton Ingresar se ejecuta una funcion */}
@@ -126,6 +139,12 @@ const FormIngreso = ( {estadoFormIngreso, cambiarEstadoFormIngreso} ) => { //Se 
                     </BoxBotonFormulario>
 
                 </Formulario>
+
+                <BoxImgLogoEmpresa> {/*Es un elemento div*/}
+                    
+                    <ImgsFormularios src={logoEmpresa}/>
+
+                </BoxImgLogoEmpresa>
 
             </BoxFormulario>
         </>

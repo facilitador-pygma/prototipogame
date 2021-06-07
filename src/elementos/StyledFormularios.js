@@ -15,13 +15,27 @@ const colores = { /*Objeto con los colores principales */
 
 const BoxFormulario = styled.div` /*Setting a cada espacio donde ese encuentra el formulario */
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
     width: 350px; /*Ancho de cada BoxFormulario*/
     margin: 30px; /*Espaciado externo */
-    padding: 30px; /*Espaciado interno */
+    padding: 20px; /*Espaciado interno */
 
     box-shadow: 0 5px 20px rgba(0,0,0,0.5); /*Sombras */
+    border-radius: 20px;
 
     background:#ccc; /*Color de fondo */
+`;
+
+const BoxLogo = styled.span`
+    display: block;
+    position: absolute;
+    top: -90px;
+    left: 6%;
 `;
 
 const TituloFormularioRegistro = styled.p`
@@ -38,6 +52,29 @@ const TituloFormularioLogin = styled.p`
     font-weight: bold; /*Negrita */
 `;
 
+const BoxImgLogin = styled.div`
+    position: relative; /*Poder manipular los hijos de esta clase o div*/
+    display: flex; /*Coloca una al lado del otro lo elementos hijos*/
+    align-items: center;/*Estos dos lineas centran la imagen*/
+    justify-content: center;
+
+    /*width: 290px;*/
+    margin-top: 10px;
+
+    z-index: 3;
+`;
+
+const ImgsFormularios = styled.img`
+    top:0; /*Fija arriba*/
+    left: 0;
+    width: 100%; /*Ajuste al ancho total del contenedor .imgBox*/
+    height: 100%; /*Ajuste a la altura total del contenedor .imgBox*/
+
+    /*Hasta aca la imagen quedaba desproporcionada, es decir, aplastada*/
+
+    object-fit: cover;
+`;
+
 const Formulario = styled.form`
     display: grid; /*Display tipo fila-columna */
     grid-template-columns: 1fr; /*Ubica los elementos espaciados igualmente en una columna*/
@@ -48,7 +85,7 @@ const Label = styled.label`
     display: block; /*Ocupa todo el ancho del BoxFormulario */
     font-weight: 700; /*Negrita de la fuente seleccioanda*/
     padding: 10px; /*Espaciado interno */
-    min-height: 40px; /*Es para asegurar que el input no se suba al espacio del label, es decir quede desfasado con respecto a los otros.*/
+    /*min-height: 40px; /*Es para asegurar que el input no se suba al espacio del label, es decir quede desfasado con respecto a los otros.*/
     cursor: pointer; /*Convierte el cursor en tipo mano */
     
     /*Uso de las props (propiedades) en React, en este caso del estado valido para cambiar ciertos aspectos del label*/
@@ -184,6 +221,17 @@ const MensajeExito = styled.p`
     margin-top: 10px; /*Espacio externo parte superior*/
 `;
 
+const BoxImgLogoEmpresa = styled.div`
+    position: relative; /*Poder manipular los hijos de esta clase o div*/
+    display: flex; /*Coloca una al lado del otro lo elementos hijos*/
+    align-items: center;/*Estos dos lineas centran la imagen*/
+    justify-content: center;
+
+    /*width: 233px;*/
+    margin-top: 10px;
+
+    z-index: 3;
+`;
 
 export { BoxFormulario,
          TituloFormularioRegistro,
@@ -198,4 +246,8 @@ export { BoxFormulario,
          BoxBotonFormulario,
          BotonFormulario,
          MensajeError,
-         MensajeExito };
+         MensajeExito,
+         BoxLogo,
+         BoxImgLogin,
+         ImgsFormularios,
+         BoxImgLogoEmpresa };

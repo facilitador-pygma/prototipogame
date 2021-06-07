@@ -7,19 +7,26 @@ import React, { useState } from 'react';
 
 //Componentes
 import Inputs from '../Inputs';
+import LogoG4T from './../../logog4t/LogoG4T';
 
 //Iconos
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 
-//Creadas
+//Imagenes
+import logoEmpresa from './../../../assets/img/Logo_LoginyRegistro.png';
+
+//Elementos
 import { BoxFormulario,
          TituloFormularioRegistro,
          Formulario,
          BoxBotonFormulario,
          BotonFormulario,
          MensajeError,
-         MensajeExito } from '../../../elementos/StyledFormularios';
+         MensajeExito,
+         BoxLogo,
+         ImgsFormularios,
+         BoxImgLogoEmpresa } from '../../../elementos/StyledFormularios';
 
 
 
@@ -70,7 +77,12 @@ const FormRegistro = () => {
 
     return(
         <>
+
             <BoxFormulario> {/*Es un elemento div, padre del formulario*/}
+
+                <BoxLogo>
+                    <LogoG4T />
+                </BoxLogo>
 
                 <TituloFormularioRegistro>Registro</TituloFormularioRegistro> {/*Es un elemento p*/}
 
@@ -141,6 +153,12 @@ const FormRegistro = () => {
                     </BoxBotonFormulario>
 
                 </Formulario>
+
+                <BoxImgLogoEmpresa> {/*Es un elemento div*/}
+                    
+                    <ImgsFormularios src={logoEmpresa}/>
+
+                </BoxImgLogoEmpresa>
 
             </BoxFormulario>
             
