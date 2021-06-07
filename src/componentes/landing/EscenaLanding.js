@@ -7,7 +7,7 @@ import React from 'react';
 
 //Creadas
 import MarcoInicio from './marco/MarcoInicio';
-import Footer from '../footer/Footer';
+import Footer from '../Footer/Footer';
 
 
 const EscenaLanding = ({estado, cambiarEstado}) => { //Se anexan props para saber en donde se da el paso de escena de usuarios
