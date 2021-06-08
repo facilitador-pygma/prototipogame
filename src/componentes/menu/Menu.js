@@ -20,7 +20,7 @@ const Menu = () => {
     
                 <NavigationMenu> {/*Elemento ul */}
 
-                    <ListasMenu tituloenlace= "inicio" />
+                    <ListasMenu tituloenlace= "inicio" /*linkMenu= "EscenaHome"*/ />
                     <ListasMenu tituloenlace= "avatar" />
                     <ListasMenu tituloenlace= "score" />
                     <ListasMenu tituloenlace= "tienda" />

@@ -5,7 +5,6 @@
 //Propias de react
 import React from 'react';
 
-
 //Elementos
 import { ListaMenu,
          MarcoMenu,
@@ -15,7 +14,7 @@ import { ListaMenu,
          ContenidoMarcoMenu,
          Navlink } from '../../elementos/StyledMenu';
 
-const ListasMenu = ( { tituloenlace } ) => {
+const ListasMenu = ( { tituloenlace, linkMenu } ) => {
 
     return ( 
 
@@ -28,7 +27,7 @@ const ListasMenu = ( { tituloenlace } ) => {
 
                     <ContenidoMarcoMenu>
                         
-                        <Navlink href="#">{tituloenlace}</Navlink> {/*Tener cuidado mas adelante a cambia por NavLink y href="" por to="" */}
+                        <Navlink href="#">{tituloenlace}</Navlink> {/*Tener cuidado mas adelante a cambia por NavLink y href="" por to={} */}
 
                     </ContenidoMarcoMenu>
                     

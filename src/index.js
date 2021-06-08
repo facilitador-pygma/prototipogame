@@ -10,6 +10,7 @@ import ReactDOM from 'react-dom';
 //Componentes
 import App from './App';
 //import EscenaHome from './componentes/home/EscenaHome';
+//import EscenaAvatar from './componentes/avatar/EscenaAvatar';
 
 //Estilos
 import './assets/estilos/estilos.css';
@@ -19,6 +20,8 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
+
+
 
   document.getElementById('root')
 );
