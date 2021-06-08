@@ -13,7 +13,7 @@ import { ListaMenu,
          ContenedorCirculosMenu,
          CirculosMenu,
          ContenidoMarcoMenu,
-         Navlink } from './../../elementos/styledMenu';
+         Navlink } from '../../elementos/StyledMenu';
 
 const ListasMenu = ( { tituloenlace } ) => {
 

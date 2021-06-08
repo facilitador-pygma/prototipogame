@@ -6,7 +6,7 @@ import styled, { css } from 'styled-components';
 
 const MarcoLogoG4T = styled.div`
     position: relative;
-    min-width: 200px;
+    max-width: 300px;
     width: 100%;
     height: 100px;
     

@@ -10,7 +10,7 @@ import ListasMenu from './ListasMenu';
 
 //Elementos
 import { HeaderMenu,
-         NavigationMenu } from './../../elementos/styledMenu';
+         NavigationMenu } from '../../elementos/StyledMenu';
 
 const Menu = () => {
     return ( 

@@ -38,7 +38,7 @@ main{ /*Se trabaja el main en la escena de los usuarios, */
     display: flex; /*Esta linea se usa junto con las siguientes dos para centrar en la mitad de la pantalla los componetes hijos*/
     justify-content: center;
     align-items: center;
-    /*flex-wrap: wrap; /*Los elementos hijos que quedan uno encima de otro y no caben a lo ancho, los baja creando otra fila*/
+    flex-wrap: wrap; /*Los elementos hijos que quedan uno encima de otro y no caben a lo ancho, los baja creando otra fila*/
 
     padding: 100px 0 30px; /*Espaciado interno del main*/
 }

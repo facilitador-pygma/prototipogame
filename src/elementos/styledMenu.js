@@ -8,9 +8,7 @@ import styled, { css } from 'styled-components';
 //import { NavLink } from "react-router-dom";
 
 const HeaderMenu = styled.header`
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
     padding: 30px 100px; /*arriba y abajo | derecha e izquierda*/
 
