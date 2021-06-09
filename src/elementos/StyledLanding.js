@@ -148,6 +148,8 @@ const ContenidoMarco = styled.div`
 
     background: darkorange;
     border-radius: 10px;
+
+    cursor: pointer;
 `;
 
 

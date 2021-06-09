@@ -4,11 +4,14 @@
 
 //Propios de React
 import React, {useState} from 'react';
+//import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; // Librería react-router-dom
 
 //Creadas
 import EscenaLanding from './componentes/landing/EscenaLanding';
 import EscenaUsuarios from './componentes/usuarios/EscenaUsuarios';
-import EscenaHome from './componentes/home/EscenaHome';
+import EscenaAvatar from './componentes/avatar/EscenaAvatar';
+//import EscenaInicio from './componentes/home/EscenaHome';
+//import Menu from './componentes/menu/Menu';
 
 const App = () =>{
 
@@ -20,6 +23,20 @@ const App = () =>{
   
   return(
     <>
+
+      {/*{  escenasJuego.home === 'true' &&
+      <Router> 
+        <Menu />
+          <div>
+            <Switch> 
+              <Route exact path = '/escenainicio'
+                component = { EscenaInicio }/> 
+              <Route path = '/escenaavatar'
+                component = { EscenaAvatar }/> 
+            </Switch> 
+          </div> 
+  </Router>   }*/}
+
       { escenasJuego.landing === 'true' &&
         <EscenaLanding 
           estado= {escenasJuego}
@@ -39,11 +56,12 @@ const App = () =>{
       { escenasJuego.landing === 'false' &&
         escenasJuego.usuarios === 'false' &&
         escenasJuego.home === 'true' &&
-              
-        <EscenaHome />
+
+        <EscenaAvatar />
+
       }
 
-
+      
 
     </>
   );

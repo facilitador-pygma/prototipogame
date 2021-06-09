@@ -5,7 +5,7 @@
 import styled, { css } from 'styled-components';
 
 //Propias
-//import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const HeaderMenu = styled.header`
     position: relative;
@@ -158,7 +158,7 @@ const ContenidoMarcoMenu = styled.div`
     align-items: center;
 `;
 
-const Navlink = styled.a` /* styled(NavLink), era un elemento a */
+const Navlink = styled.a`/* styled(NavLink) , era un elemento a */
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;

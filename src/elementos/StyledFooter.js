@@ -5,7 +5,7 @@
 import styled, { css } from 'styled-components';
 
 const BoxFooter = styled.div`
-    position: absolute; /*Para poder ubicar el div en la parte inferior, usando bottom y left */
+    position: relative; /*Para poder ubicar el div en la parte inferior, usando bottom y left */
     width: 100%; /*Usa todo el ancho del section */
     bottom: 0;
     left: 0;

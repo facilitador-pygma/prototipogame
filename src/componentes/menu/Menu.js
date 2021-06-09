@@ -12,6 +12,13 @@ import ListasMenu from './ListasMenu';
 import { HeaderMenu,
          NavigationMenu } from '../../elementos/StyledMenu';
 
+/*const link = {
+    inicio: '/escenainicio',
+    avatar: '/escenaavatar',
+}
+
+console.log(link.avatar);*/
+
 const Menu = () => {
     return ( 
 
@@ -20,8 +27,8 @@ const Menu = () => {
     
                 <NavigationMenu> {/*Elemento ul */}
 
-                    <ListasMenu tituloenlace= "inicio" /*linkMenu= "EscenaHome"*/ />
-                    <ListasMenu tituloenlace= "avatar" />
+                    <ListasMenu tituloenlace= "inicio" /*linkMenu= {link.inicio}*/ />
+                    <ListasMenu tituloenlace= "avatar" /*linkMenu= {link.avatar}*/ />
                     <ListasMenu tituloenlace= "score" />
                     <ListasMenu tituloenlace= "tienda" />
 
