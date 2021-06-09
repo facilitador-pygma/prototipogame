@@ -29,7 +29,14 @@ import { BoxMarcoSeleccionAvatar,
          TituloEscenaAvatar,
          InputEscenaAvatar } from './../../elementos/StyledEscenaAvatar';
 
-const EscenaAvatar = () => {
+const EscenaAvatar = ({ estadoSeleccionAvatar, cambiarEstadoSeleccionAvatar}) => {
+
+    //Define la funcion pasarEscenaUsuarios
+    const pasarEscenaRetos = (e) => {
+        e.stopPropagation(); //Detiene efecto burbuja si se presenta
+        cambiarEstadoSeleccionAvatar( {...estadoSeleccionAvatar, landing: 'false', usuarios: 'false', home: 'false', retos: 'true' } ); //Cambia el estado de la escenas en App.js
+        console.log('cambiando estado desde la seleccion del avatar');
+    }
 
     return(  
         <>
@@ -46,7 +53,7 @@ const EscenaAvatar = () => {
                 <Menu />
 
                 <BoxMarcoSeleccionAvatar>
-                    <ImgMarcoSeleccionAvatar src = {cajaSeleccionAvatar}/>
+                    <ImgMarcoSeleccionAvatar src = {cajaSeleccionAvatar} onClick= {pasarEscenaRetos}/>
                     <BoxTituloEscenaAvatar>
                         <TituloEscenaAvatar>selecciona tu avatar</TituloEscenaAvatar>
                     </BoxTituloEscenaAvatar>
@@ -56,7 +63,7 @@ const EscenaAvatar = () => {
                 </BoxMarcoSeleccionAvatar>
 
                 <Footer /> {/*Se llama al componente de Footer.js*/}  
-                
+
             </section>
         </>
     );

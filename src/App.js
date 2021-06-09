@@ -10,6 +10,7 @@ import React, {useState} from 'react';
 import EscenaLanding from './componentes/landing/EscenaLanding';
 import EscenaUsuarios from './componentes/usuarios/EscenaUsuarios';
 import EscenaAvatar from './componentes/avatar/EscenaAvatar';
+import EscenaRetos from './componentes/reto/EscenaReto';
 //import EscenaInicio from './componentes/home/EscenaHome';
 //import Menu from './componentes/menu/Menu';
 
@@ -18,7 +19,8 @@ const App = () =>{
   //Variables de estados
   const [escenasJuego, cambiarEscenasJuego] = useState ({ landing: 'true',
                                                           usuarios: null,
-                                                          home: null });
+                                                          home: null,
+                                                          retos: null });
 
   
   return(
@@ -57,9 +59,21 @@ const App = () =>{
         escenasJuego.usuarios === 'false' &&
         escenasJuego.home === 'true' &&
 
-        <EscenaAvatar />
-
+        <EscenaAvatar 
+          estadoSeleccionAvatar= {escenasJuego}
+          cambiarEstadoSeleccionAvatar= {cambiarEscenasJuego}
+        />
       }
+
+      { escenasJuego.landing === 'false' &&
+        escenasJuego.usuarios === 'false' &&
+        escenasJuego.home === 'false' &&
+        escenasJuego.retos === 'true' &&
+
+        <EscenaRetos 
+        />
+      }
+
 
       
 
