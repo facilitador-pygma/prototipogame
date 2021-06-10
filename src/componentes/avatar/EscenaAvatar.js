@@ -29,7 +29,7 @@ import { BoxMarcoSeleccionAvatar,
          TituloEscenaAvatar,
          InputEscenaAvatar } from './../../elementos/StyledEscenaAvatar';
 
-const EscenaAvatar = ({ estadoSeleccionAvatar, cambiarEstadoSeleccionAvatar}) => {
+const EscenaAvatar = ({ estadoSeleccionAvatar, cambiarEstadoSeleccionAvatar,  mostrarFooterLanding, mostrarFooterAvatar}) => {
 
     //Define la funcion pasarEscenaUsuarios
     const pasarEscenaRetos = (e) => {
@@ -62,7 +62,10 @@ const EscenaAvatar = ({ estadoSeleccionAvatar, cambiarEstadoSeleccionAvatar}) =>
                     </BoxInputEscenaAvatar>
                 </BoxMarcoSeleccionAvatar>
 
-                <Footer /> {/*Se llama al componente de Footer.js*/}  
+                <Footer 
+                    mostrarFooterLanding= {mostrarFooterLanding}
+                    mostrarFooterAvatar = {mostrarFooterAvatar}
+                /> {/*Se llama al componente de Footer.js*/}  
 
             </section>
         </>

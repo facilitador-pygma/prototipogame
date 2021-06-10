@@ -10,7 +10,7 @@ import MarcoInicio from './marco/MarcoInicio';
 import Footer from '../footer/Footer';
 
 
-const EscenaLanding = ({estado, cambiarEstado}) => { //Se anexan props para saber en donde se da el paso de escena de usuarios
+const EscenaLanding = ({estado, cambiarEstado, mostrarFooterLanding, mostrarFooterAvatar}) => { //Se anexan props para saber en donde se da el paso de escena de usuarios
   
     return(
       <>
@@ -22,7 +22,10 @@ const EscenaLanding = ({estado, cambiarEstado}) => { //Se anexan props para sabe
               /> {/*Se llama al componente de MarcoInicio, se heredan las props de App.js*/}
 
              
-              <Footer /> {/*Se llama al componente de Footer.js*/}               
+              <Footer 
+                mostrarFooterLanding= {mostrarFooterLanding}
+                mostrarFooterAvatar = {mostrarFooterAvatar}
+              /> {/*Se llama al componente de Footer.js*/}               
 
           </section>   
   

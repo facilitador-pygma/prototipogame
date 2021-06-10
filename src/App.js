@@ -22,6 +22,9 @@ const App = () =>{
                                                           home: null,
                                                           retos: null });
 
+  const FooterLanding = escenasJuego.landing;
+  const FooterAvatar = escenasJuego.home;
+
   
   return(
     <>
@@ -41,8 +44,10 @@ const App = () =>{
 
       { escenasJuego.landing === 'true' &&
         <EscenaLanding 
-          estado= {escenasJuego}
-          cambiarEstado= {cambiarEscenasJuego}
+          estado= { escenasJuego }
+          cambiarEstado= { cambiarEscenasJuego }
+          mostrarFooterLanding= { FooterLanding }
+          mostrarFooterAvatar= { FooterAvatar }
         />
       }
 
@@ -62,6 +67,9 @@ const App = () =>{
         <EscenaAvatar 
           estadoSeleccionAvatar= {escenasJuego}
           cambiarEstadoSeleccionAvatar= {cambiarEscenasJuego}
+          
+          mostrarFooterLanding= { FooterLanding }
+          mostrarFooterAvatar= { FooterAvatar }
         />
       }
 

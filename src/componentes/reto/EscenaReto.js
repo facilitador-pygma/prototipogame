@@ -117,6 +117,8 @@ import { BoxMarcoRetos,
                             </BoxTodosRetos>
                         </BoxMarcoRetos>
                     </BoxMarcoSeleccionAvatar>
+
+                    <Footer />
                     
                 </section>
             </>
