@@ -34,7 +34,14 @@ import { BoxMarcoRetos,
          LeyendaEscenaReto } from './../../elementos/StyledEscenaRetos';
 
 
-    const EscenaReto = () => {
+    const EscenaReto = ( {  estadoSeleccionarReto, cambiarEstadoSeleccionReto, mostrarFooterLanding, mostrarFooterAvatar, mostrarFooterRetos } ) => {
+
+        //Define la funcion pasarEscenaUsuarios
+        const pasarEscenaInstruccionReto = (e) => {
+            e.stopPropagation(); //Detiene efecto burbuja si se presenta
+            cambiarEstadoSeleccionReto( {...estadoSeleccionarReto, landing: 'false', usuarios: 'false', home: 'false', retos: 'false', instruccionR1:'true' } ); //Cambia el estado de la escenas en App.js
+            console.log('cambiando estado desde la seleccion del avatar');
+        }
 
         return(  
             <>
@@ -58,7 +65,7 @@ import { BoxMarcoRetos,
                             <TituloEscenaRetos>selecciona el reto </TituloEscenaRetos>
 
                             <BoxTodosRetos>
-                                <BoxReto>
+                                <BoxReto onClick= { pasarEscenaInstruccionReto }>
                                     <BoxImgEscenaReto>
                                         <ImgsEscenaReto src= { retoDesbloqueado }/>
                                     </BoxImgEscenaReto>
@@ -118,7 +125,11 @@ import { BoxMarcoRetos,
                         </BoxMarcoRetos>
                     </BoxMarcoSeleccionAvatar>
 
-                    <Footer />
+                    <Footer 
+                        mostrarFooterLanding= { mostrarFooterLanding }
+                        mostrarFooterAvatar= { mostrarFooterAvatar }
+                        mostrarFooterRetos = { mostrarFooterRetos }
+                    />
                     
                 </section>
             </>

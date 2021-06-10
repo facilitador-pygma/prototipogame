@@ -43,6 +43,8 @@ const BoxReto = styled.div`
     align-items: center;
 
     flex-direction: column;
+
+    cursor: pointer;
 `;
 
 const BoxImgEscenaReto = styled.div`

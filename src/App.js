@@ -20,10 +20,12 @@ const App = () =>{
   const [escenasJuego, cambiarEscenasJuego] = useState ({ landing: 'true',
                                                           usuarios: null,
                                                           home: null,
-                                                          retos: null });
+                                                          retos: null,
+                                                          instruccionR1: null, });
 
   const FooterLanding = escenasJuego.landing;
   const FooterAvatar = escenasJuego.home;
+  const FooterRetos = escenasJuego.retos;
 
   
   return(
@@ -78,7 +80,13 @@ const App = () =>{
         escenasJuego.home === 'false' &&
         escenasJuego.retos === 'true' &&
 
-        <EscenaRetos 
+        <EscenaRetos
+          estadoSeleccionarReto= { escenasJuego }
+          cambiarEstadoSeleccionReto= {cambiarEscenasJuego}
+
+          mostrarFooterLanding= { FooterLanding }
+          mostrarFooterAvatar= { FooterAvatar }
+          mostrarFooterRetos = { FooterRetos } 
         />
       }
 

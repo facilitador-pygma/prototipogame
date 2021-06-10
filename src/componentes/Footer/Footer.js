@@ -20,7 +20,7 @@ import imgFooter from '../../assets/img/Mensaje_Mapa.png';
 
 
 
-const Footer = ( {mostrarFooterLanding, mostrarFooterAvatar} ) => {
+const Footer = ( {mostrarFooterLanding, mostrarFooterAvatar, mostrarFooterRetos} ) => {
 
     return( //mostrarFooterLanding === 'true' , mostrarFooterLanding === 'false' && mostrarFooterAvatar === 'true' 
     
@@ -46,7 +46,9 @@ const Footer = ( {mostrarFooterLanding, mostrarFooterAvatar} ) => {
                         </TextoFooter>
                     }
 
-                    { false &&
+                    { mostrarFooterLanding === 'false' &&
+                      mostrarFooterAvatar === 'false' &&
+                      mostrarFooterRetos === 'true' &&
                         <>
                             <Indicadores 
                                 textoIndicador = "avance"    
