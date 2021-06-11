@@ -13,7 +13,7 @@ const MarcoIndicadores = styled.div`
     justify-content: center;
     align-items: center;
 
-    background: #350048;
+    background: linear-gradient(45deg,#170126,#55038c);
 
     box-shadow: 0 15px 25px rgba(0,0,0,0.03);
     border: 1px solid rgba(255, 255, 255, 0.25);
@@ -34,7 +34,7 @@ const MarcoIndicadores = styled.div`
 
         width: 37px; 
         height: 37px; 
-        background: #350048;
+        background: linear-gradient(30deg,#460273,#55038c);/*#460273, se coloca para disimular la capa de la punta derecha*/
         transform: rotate(45deg);
         border-top-right-radius: 20px;
         border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -44,12 +44,12 @@ const MarcoIndicadores = styled.div`
     &::after{ /*Punta izquierda */
         content: '';
         position: absolute;
-        left: -11.4px; /*Ubica la capa before de infinite en la mitad del contenedoor*/
+        left: -11px; /*Ubica la capa before de infinite en la mitad del contenedoor*/
         transform: translateY(-50%);
 
         width: 37px; 
         height: 37px; 
-        background: #350048;
+        background: linear-gradient(30deg,#170126,#26023f);/* #350258, se coloca para disimular la capa de la punta izquierda*/
         transform: rotate(45deg);
         border-bottom-left-radius: 20px;
         border-left: 1px solid rgba(255, 255, 255, 0.5);
@@ -89,7 +89,8 @@ const GuionesIndicadores = styled.span`
     position: relative;
     height: 5px;
     border-radius: 5px;
-    background: linear-gradient(#ffa500,#ffff00);
+    background: linear-gradient(90deg,#fbb03b,#fcee21);
+    border: 1px solid rgba(255,255,255, 0.05);
     
     &:nth-child(1){
         width: 5px;

@@ -23,14 +23,14 @@ const HeaderMenu = styled.header`
 const NavigationMenu = styled.ul` /*Setting a la lista no ordenada (ul) que contiene la lista de items*/
     width: calc(100% - 60px);
     display: flex;
-    justify-content:space-between;
+    justify-content:space-around;
     align-items: center;
 `;
 
 const ListaMenu = styled.li` /*Settings a los items de la li*/
     list-style: none;
 
-    width: 100%;
+    width: 150px;
     height: 50px; /*Se anexa altura a cada li para ajustar el contenido*/
     position: relative;
     display: flex;
@@ -48,7 +48,7 @@ const MarcoMenu = styled.div`
     justify-content: center;
     align-items: center;
 
-    background: #350048;
+    background: linear-gradient(180deg,#170126,#55038c,#170126,#55038c);
 
     box-shadow: 0 15px 25px rgba(0,0,0,0.03);
     border: 1px solid rgba(255, 255, 255, 0.25);
@@ -73,7 +73,7 @@ const MarcoMenu = styled.div`
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
 
-        background: #350048;
+        background: #170126;
     }
 
     &::after{ /**/
@@ -85,13 +85,13 @@ const MarcoMenu = styled.div`
         height: 2px;
         width: 3.2vw;
 
-        border-top: 1px solid #350048; /*Si no se pone queda visualizando una linea blanca del borde de .marco */
+        border-top: 1px solid  #55038c; /*Si no se pone queda visualizando una linea blanca del borde de .marco */
         border-bottom: 1px solid rgba(255, 255, 255, 0.5);
         border-left: 1px solid rgba(255, 255, 255, 0.5);
         border-bottom-left-radius: 18px;
         border-bottom-right-radius: 18px;
 
-        background: #350048;    
+        background: #55038c;    
     }
 `;
 
@@ -103,7 +103,7 @@ const BarraMenu = styled.div`
     left: 50%;
     transform: translateX(-50%);
     
-    background: linear-gradient(#ffa500,#ffff00);
+    background: linear-gradient(90deg,#fbb03b,#fcee21);
 
     border-radius: 10px;
 `;
@@ -127,7 +127,7 @@ const ContenedorCirculosMenu = styled.div`
 const CirculosMenu = styled.span`
     position: relative;
     border-radius: 50%;
-    background: linear-gradient(#ffa500,#ffff00);
+    background: linear-gradient(90deg,#fbb03b,#fcee21);
     
     &:nth-child(1){
         width: 2px;
@@ -147,15 +147,17 @@ const CirculosMenu = styled.span`
 `;
 
 const ContenidoMarcoMenu = styled.div`
-    width: 90%;
+    width: 93%;
     height: 80%;
-    background: darkorange;
-    border-radius: 5px;
 
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background: linear-gradient(90deg,#170126,#2c0745);
+    border: 1px solid rgba(255,255,255, 0.1);
+    border-radius: 8px;
 `;
 
 const Navlink = styled.a`/* styled(NavLink) , era un elemento a */

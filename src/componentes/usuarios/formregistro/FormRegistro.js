@@ -14,14 +14,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 
 //Imagenes
-import logoEmpresa from './../../../assets/img/Logo_LoginyRegistro.png';
+import logoEmpresa from './../../../assets/img/G4T_LogoPYG_registro.png';
 
 //Elementos
-import { BoxFormulario,
+import { BoxFormularioRegistro,
          TituloFormularioRegistro,
          Formulario,
          BoxBotonFormulario,
-         BotonFormulario,
+         BotonFormularioRegistro,
          MensajeError,
          MensajeExito,
          BoxLogo,
@@ -78,8 +78,8 @@ const FormRegistro = () => {
     return(
         <>
 
-            <BoxFormulario> {/*Es un elemento div, padre del formulario*/}
-
+            <BoxFormularioRegistro> {/*Es un elemento div, padre del formulario*/}
+                
                 <BoxLogo>
                     <LogoG4T />
                 </BoxLogo>
@@ -140,7 +140,7 @@ const FormRegistro = () => {
 
                     <BoxBotonFormulario> {/*Es un elemento div, padre de boton y mensaje de exito */}
 
-                        <BotonFormulario type="submit">Registrar</BotonFormulario>
+                        <BotonFormularioRegistro type="submit">Registrar</BotonFormularioRegistro>
 
                         { formularioRegistroValido === true &&
 
@@ -160,7 +160,7 @@ const FormRegistro = () => {
 
                 </BoxImgLogoEmpresa>
 
-            </BoxFormulario>
+            </BoxFormularioRegistro>
             
         </>
     );

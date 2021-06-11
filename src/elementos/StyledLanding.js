@@ -6,14 +6,14 @@ import styled, { css } from 'styled-components';
 
 const Marco = styled.div`
     position: relative;
-    width: 80%;
+    width: 900px;
     height: 400px;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    background: #350048;
+    background: linear-gradient(180deg,#170126,#55038c,#170126,#55038c);
 
     box-shadow: 0 15px 25px rgba(0,0,0,0.03);
     border: 1px solid rgba(255, 255, 255, 0.25);
@@ -40,7 +40,7 @@ const Marco = styled.div`
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
 
-        background: #350048;
+        background: #170126;
     }
 
     &::after{
@@ -52,18 +52,18 @@ const Marco = styled.div`
         height: 10px;
         width: 20vw;
 
-        border-top: 1px solid #350048; /*Si no se pone queda visualizando una linea blanca del borde de .marco */
+        border-top: 1px solid #55038c; /*Si no se pone queda visualizando una linea blanca del borde de .marco */
         border-bottom: 1px solid rgba(255, 255, 255, 0.5);
         border-left: 1px solid rgba(255, 255, 255, 0.5);
         border-bottom-left-radius: 18px;
         border-bottom-right-radius: 18px;
 
-        background: #350048;
-        }
+        background: #55038c;
+    }
 
-        @media (max-width:800px){
-            margin-bottom: 50px;
-        }
+    @media (max-width:800px){
+        margin-bottom: 50px;
+    }
 `;
 
 const Barra = styled.div`
@@ -74,7 +74,9 @@ const Barra = styled.div`
     left: 50%;
     transform: translateX(-50%);
 
-    background: linear-gradient(#ffa500,#ffff00);
+    background: linear-gradient(90deg,#fbb03b,#fcee21);
+
+    border: 1px solid rgba(255,255,255, 0.1);
 
     border-radius: 10px;
 `;
@@ -98,7 +100,8 @@ const ContenedorCirculos = styled.div`
 const Circulos = styled.span`
     position: relative;
     border-radius: 50%;
-    background: linear-gradient(#ffa500,#ffff00);
+    background: linear-gradient(90deg,#fbb03b,#fcee21);
+    border: 1px solid rgba(255,255,255, 0.1);
     
     &:nth-child(1){
         width: 6px;
@@ -146,10 +149,23 @@ const ContenidoMarco = styled.div`
     width: 96%;
     height: 91%;
 
-    background: darkorange;
+    background: linear-gradient(90deg,#170126,#2c0745);
+    border: 1px solid rgba(255,255,255, 0.1);
     border-radius: 10px;
 
     cursor: pointer;
+`;
+
+const ImgContenidoMarco = styled.img`
+    top:0; /*Fija arriba*/
+    left: 0;
+    width: 100%; /*Ajuste al ancho total del contenedor .imgBox*/
+    height: 100%; /*Ajuste a la altura total del contenedor .imgBox*/
+
+    /*Hasta aca la imagen quedaba desproporcionada, es decir, aplastada*/
+
+    object-fit: cover; /*object-fit, redimensiona una imagen o video para ajustarse a su contenedor.*/
+                /*cover, el contenido reemplazado se dimensiona para mantener su relación de aspecto mientras llena el cuadro de contenido completo del elemento. Si la relación de aspecto del objeto no coincide con la relación de aspecto de su caja, entonces el objeto se recortará para que se ajuste*/
 `;
 
 
@@ -157,4 +173,5 @@ export { Marco,
          Barra,
          ContenedorCirculos,
          Circulos,
-         ContenidoMarco };
+         ContenidoMarco,
+         ImgContenidoMarco };

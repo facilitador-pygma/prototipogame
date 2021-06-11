@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 section{ /*El fondo de pantalla no cambia cuando se pasan las escenas se escoge el body como elemento general*/
@@ -15,7 +18,7 @@ section{ /*El fondo de pantalla no cambia cuando se pasan las escenas se escoge 
 
     flex-direction: column;
 
-    background: url(../../assets/img/Fondo_Pantalla\ de\ bienvenida.png); /*Se carga la imagen de fondo en el body*/
+    background: url(../../assets/img/G4TFondo.png); /*Se carga la imagen de fondo en el body*/
     background-position: center; /*las tres lineas restantes ayuda a proporcionar una mejor ubicacion de la imagen*/
     background-size: cover;
     background-repeat: no-repeat;

@@ -13,7 +13,7 @@ const colores = { /*Objeto con los colores principales */
     exito: '#1ed12d',
 }
 
-const BoxFormulario = styled.div` /*Setting a cada espacio donde ese encuentra el formulario */
+const BoxFormularioRegistro = styled.div` /*Setting a cada espacio donde ese encuentra el formulario */
     position: relative;
     display: flex;
     align-items: center;
@@ -28,7 +28,25 @@ const BoxFormulario = styled.div` /*Setting a cada espacio donde ese encuentra e
     box-shadow: 0 5px 20px rgba(0,0,0,0.5); /*Sombras */
     border-radius: 20px;
 
-    background:#ccc; /*Color de fondo */
+    background: linear-gradient(120deg,#dadada,#cccccc);
+`;
+
+const BoxFormularioIngreso = styled.div` /*Setting a cada espacio donde ese encuentra el formulario */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    width: 350px; /*Ancho de cada BoxFormulario*/
+    margin: 30px; /*Espaciado externo */
+    padding: 20px; /*Espaciado interno */
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5); /*Sombras */
+    border-radius: 20px;
+
+    background: linear-gradient(90deg,#170126,#55038c);
 `;
 
 const BoxLogo = styled.span`
@@ -39,17 +57,17 @@ const BoxLogo = styled.span`
 `;
 
 const TituloFormularioRegistro = styled.p`
-    color: #29003b; /*Color del letra*/
+    color: #290a4c; /*Color del letra*/
     text-align: center; /*Texto centrado con respecto al BoxFormulario */
     font-size: 25px; /*Tamaño de letra */
-    font-weight: bold; /*Negrita */
+    font-weight: 700; /*Negrita */
 `;
 
 const TituloFormularioLogin = styled.p`
     color: #fff; /*Color del letra*/
     text-align: center; /*Texto centrado con respecto al BoxFormulario */
     font-size: 25px; /*Tamaño de letra */
-    font-weight: bold; /*Negrita */
+    font-weight: 700; /*Negrita */
 `;
 
 const BoxImgLogin = styled.div`
@@ -57,8 +75,6 @@ const BoxImgLogin = styled.div`
     display: flex; /*Coloca una al lado del otro lo elementos hijos*/
     align-items: center;/*Estos dos lineas centran la imagen*/
     justify-content: center;
-
-    /*width: 290px;*/
     margin-top: 10px;
 
     z-index: 3;
@@ -195,12 +211,32 @@ const BoxBotonFormulario = styled.div`
     flex-direction: column; /*Mantiene el boton arriba y el texto de mensaje de exito abajo*/
 `;
 
-const BotonFormulario = styled.button`
+const BotonFormularioRegistro = styled.button`
     height: 45px; /*Da una altura al boton */
     line-height: 45px; /*Importante para que el contendido quede centrado */
     width: 50%; /*Usa la mitad del ancho de su contenedor o BoxFormulario */
-    background: radial-gradient(#5e0088,#29003b); /*Color de fondo*/
-    color: #1e90ff; /*Color de letra*/
+    background: linear-gradient(45deg,#170126,#2c0745,#170126); /*Color de fondo*/
+    color: #30bad3; /*Color de letra*/
+    font-size: 25px; /*Tamaño de letra*/
+    font-weight: bold; /*Negrita*/
+    letter-spacing: 0.5px; /*Espacio entre letras*/
+    border: none; /*Quita el borde que viene por decfecto en los botones de html */
+    border-radius: 3px; /*Puntas redondeadas */
+    cursor: pointer; /*Convierte el cursor en tipo mano */
+
+    transition: 0.1s ease all; /*Pequeña transicion para el cambio de cualquier propiedad como efecto */
+
+    &:hover{ /*Cuando pasen el cursor por encima del boton */
+        box-shadow: 3px 0 30px rgba(163,163,163, 1); /*Coloca una sombra */
+    }
+`;
+
+const BotonFormularioLogin = styled.button`
+    height: 45px; /*Da una altura al boton */
+    line-height: 45px; /*Importante para que el contendido quede centrado */
+    width: 50%; /*Usa la mitad del ancho de su contenedor o BoxFormulario */
+    background: linear-gradient(45deg,#007dc3,#30bad3); /*Color de fondo*/
+    color: #fff; /*Color de letra*/
     font-size: 25px; /*Tamaño de letra*/
     font-weight: bold; /*Negrita*/
     letter-spacing: 0.5px; /*Espacio entre letras*/
@@ -233,7 +269,8 @@ const BoxImgLogoEmpresa = styled.div`
     z-index: 3;
 `;
 
-export { BoxFormulario,
+export { BoxFormularioRegistro,
+         BoxFormularioIngreso,
          TituloFormularioRegistro,
          TituloFormularioLogin,
          Formulario,
@@ -244,7 +281,8 @@ export { BoxFormulario,
          IconoValidacion,
          IconoInput,
          BoxBotonFormulario,
-         BotonFormulario,
+         BotonFormularioRegistro,
+         BotonFormularioLogin,
          MensajeError,
          MensajeExito,
          BoxLogo,

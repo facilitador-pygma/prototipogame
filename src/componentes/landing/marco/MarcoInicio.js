@@ -6,14 +6,15 @@
 import React from 'react';
 
 //Imagenes
-import logoInicio from '../../../assets/img/Logo_Pantalla_de_bienvenida.png';
+import imgPantallaBienvenida from '../../../assets/img/G4T_Pantalla_de_bienvenida_clic_.png';
 
 //Elementos
 import { Marco,
          Barra,
          ContenedorCirculos,
          Circulos,
-         ContenidoMarco } from '../../../elementos/StyledLanding';
+         ContenidoMarco,
+         ImgContenidoMarco } from '../../../elementos/StyledLanding';
 
 const MarcoInicio = ( {estadoMarco, cambiarEstadoMarco} ) => {  //Se heredan los props para saber en donde se da el paso de escena al home
 
@@ -31,7 +32,7 @@ const MarcoInicio = ( {estadoMarco, cambiarEstadoMarco} ) => {  //Se heredan los
             <Barra></Barra> {/*Es un div, se usa los estilos del elemento StyledInicio.js*/}
 
             <ContenidoMarco onClick= {pasarEscenaUsuarios}> {/*Es un div, se usa los estilos del elemento StyledInicio.js*/}
-               {/*<img src={logoInicio}/>*/}
+               <ImgContenidoMarco src={imgPantallaBienvenida}/>
             </ContenidoMarco> 
                     
             <ContenedorCirculos> {/*Es un div, se usa los estilos del elemento StyledInicio.js*/}

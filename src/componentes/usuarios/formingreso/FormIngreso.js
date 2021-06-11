@@ -13,15 +13,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 
 //Imagenes
-import logoG4T from './../../../assets/img/Logo_registro.png';
-import logoEmpresa from './../../../assets/img/Logo_LoginyRegistro.png';
+import logoG4T from './../../../assets/img/G4T_Logo_Login.png';
+import logoEmpresa from './../../../assets/img/G4T_LogoPYG_login.png';
 
 //Creadas
-import { BoxFormulario,
+import { BoxFormularioIngreso,
          TituloFormularioLogin,
          Formulario,
          BoxBotonFormulario,
-         BotonFormulario,
+         BotonFormularioLogin,
          MensajeError,
          MensajeExito,
          BoxImgLogin,
@@ -77,7 +77,7 @@ const FormIngreso = ( {estadoFormIngreso, cambiarEstadoFormIngreso} ) => { //Se 
     return(
 
         <>
-            <BoxFormulario> {/*Es un elemento div, padre del formulario, titulo e imagen*/}
+            <BoxFormularioIngreso> {/*Es un elemento div, padre del formulario, titulo e imagen*/}
 
                 <TituloFormularioLogin>Login</TituloFormularioLogin> {/*Es un elemento p*/}
 
@@ -126,7 +126,7 @@ const FormIngreso = ( {estadoFormIngreso, cambiarEstadoFormIngreso} ) => { //Se 
 
                     <BoxBotonFormulario> {/*Es un elemento div, padre de boton y mensaje de exito */}
 
-                        <BotonFormulario type="submit">Ingresar</BotonFormulario>
+                        <BotonFormularioLogin type="submit">Ingresar</BotonFormularioLogin>
 
                         { formularioIngresoValido === true &&
 
@@ -146,7 +146,7 @@ const FormIngreso = ( {estadoFormIngreso, cambiarEstadoFormIngreso} ) => { //Se 
 
                 </BoxImgLogoEmpresa>
 
-            </BoxFormulario>
+            </BoxFormularioIngreso>
         </>
 
     );
