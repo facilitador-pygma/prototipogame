@@ -9,7 +9,6 @@ const colores = { /*Objeto con los colores principales */
 }
 
 const BoxMarcoSeleccionAvatar = styled.div`
-    /*width: 100%;*/
     position: relative; /*Poder manipular los hijos de esta clase o div*/
     display: flex; /*Coloca una al lado del otro lo elementos hijos*/
     align-items: center;/*Estos dos lineas centran la imagen*/

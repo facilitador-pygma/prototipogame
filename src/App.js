@@ -11,6 +11,7 @@ import EscenaLanding from './componentes/landing/EscenaLanding';
 import EscenaUsuarios from './componentes/usuarios/EscenaUsuarios';
 import EscenaAvatar from './componentes/avatar/EscenaAvatar';
 import EscenaRetos from './componentes/reto/EscenaReto';
+import EscenaInstrucciones from './componentes/instrucciones/EscenaInstrucciones';
 //import EscenaInicio from './componentes/home/EscenaHome';
 //import Menu from './componentes/menu/Menu';
 
@@ -26,6 +27,7 @@ const App = () =>{
   const FooterLanding = escenasJuego.landing;
   const FooterAvatar = escenasJuego.home;
   const FooterRetos = escenasJuego.retos;
+  const FooterInstrucciones = escenasJuego.instruccionR1;
 
   
   return(
@@ -87,6 +89,21 @@ const App = () =>{
           mostrarFooterLanding= { FooterLanding }
           mostrarFooterAvatar= { FooterAvatar }
           mostrarFooterRetos = { FooterRetos } 
+        />
+      }
+
+      { escenasJuego.landing === 'false' &&
+        escenasJuego.usuarios === 'false' &&
+        escenasJuego.home === 'false' &&
+        escenasJuego.retos === 'false' &&
+        escenasJuego.instruccionR1 === 'true' &&
+
+        <EscenaInstrucciones
+
+          mostrarFooterLanding= { FooterLanding }
+          mostrarFooterAvatar= { FooterAvatar }
+          mostrarFooterRetos = { FooterRetos }
+          mostrarFooterInstrucciones = { FooterInstrucciones }
         />
       }
 
