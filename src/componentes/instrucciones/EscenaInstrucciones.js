@@ -75,9 +75,8 @@ const EscenaInstrucciones = ( { mostrarFooterLanding, mostrarFooterAvatar, mostr
 
                                     <BoxTextoInstrucciones>
                                         <TextoInstrucciones>
-                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, voluptates,
-                                            debitis dicta quibusdam praesentium deserunt id amet vel,maxime at labore doloribus voluptate.
-                                            Sit magni dignissimos vitae maxime est debitis.
+                                            El primer reto contará con un tiempo determinado. <br/><br/>
+                                            En el podrás recolectar de  1 a 4 estrellas dependiendo de que tan cerca estés de la respuesta correcta.
                                         </TextoInstrucciones>
                                     </BoxTextoInstrucciones>
 
