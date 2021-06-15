@@ -16,6 +16,8 @@ import puertaInstruccionReto1 from './../../assets/img/Puerta_Reto1.png';
 import cajaInstruccionesReto1 from './../../assets/img/Instrucciones_Reto1.png';
 import imgTemporizador from './../../assets/img/Tiempo_Reto1.png';
 import imgInstruccionReto1 from './../../assets/img/Avatar_Reto1.png';
+import avatarUno from './../../assets/img/G4T_Avatar_Galatea.png';
+import avatarDos from './../../assets/img/G4T_Avatar_EDI.png';
 
 //Elementos
 import { BoxLogoG4T,
@@ -37,7 +39,7 @@ import { BoxMarcoInstrucciones,
          BotonIngresarInstrucciones  } from './../../elementos/StyledInstrucciones';
 
 
-const EscenaInstrucciones = ( { mostrarFooterLanding, mostrarFooterAvatar, mostrarFooterRetos, mostrarFooterInstrucciones } ) => {
+const EscenaInstrucciones = ( { mostrarFooterLanding, mostrarFooterAvatar, mostrarFooterRetos, mostrarFooterInstrucciones, mostrarAvatar1, mostrarAvatar2 } ) => {
 
 
         return(  
@@ -60,7 +62,7 @@ const EscenaInstrucciones = ( { mostrarFooterLanding, mostrarFooterAvatar, mostr
 
                             <BoxLadoIzquierdoInstrucciones>
                                 <BoxImgLadoIzquierdoInstrucciones>
-                                    <ImgsContenidoMarcoInstrucciones src= { imgInstruccionReto1 }/>
+                                    <ImgsContenidoMarcoInstrucciones src= { mostrarAvatar1 === 'true' ? avatarUno : mostrarAvatar2 === 'true' ? avatarDos : console.log('Avatar no encontrado') } /*src= { imgInstruccionReto1 }*//>
                                 </BoxImgLadoIzquierdoInstrucciones>
                             </BoxLadoIzquierdoInstrucciones>
 

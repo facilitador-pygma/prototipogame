@@ -29,6 +29,12 @@ const App = () =>{
   const FooterRetos = escenasJuego.retos;
   const FooterInstrucciones = escenasJuego.instruccionR1;
 
+  const [ escogerAvatar, cambiarEscogerAvatar ] = useState ({ avatar1: null,
+                                                              avatar2: null, });
+
+  const AvatarUno = escogerAvatar.avatar1;
+  const AvatarDos = escogerAvatar.avatar2;
+
   
   return(
     <>
@@ -71,6 +77,9 @@ const App = () =>{
         <EscenaAvatar 
           estadoSeleccionAvatar= {escenasJuego}
           cambiarEstadoSeleccionAvatar= {cambiarEscenasJuego}
+
+          estadoEscogerAvatar= { escogerAvatar }
+          cambiarEstadoEscogerAvatar = { cambiarEscogerAvatar }
           
           mostrarFooterLanding= { FooterLanding }
           mostrarFooterAvatar= { FooterAvatar }
@@ -99,6 +108,9 @@ const App = () =>{
         escenasJuego.instruccionR1 === 'true' &&
 
         <EscenaInstrucciones
+
+          mostrarAvatar1= { AvatarUno }
+          mostrarAvatar2= { AvatarDos }
 
           mostrarFooterLanding= { FooterLanding }
           mostrarFooterAvatar= { FooterAvatar }

@@ -36,16 +36,17 @@ const BoxContenidoMarcoInstrucciones = styled.div`
 `;
 
 const BoxLadoIzquierdoInstrucciones = styled.div`
-    width: 100%;
     position: relative; /*Poder manipular los hijos de esta clase o div*/
     display: flex;
     align-items: center;
-    bottom:0;
+    width: 200px;
 `;
 
 const BoxImgLadoIzquierdoInstrucciones = styled.div`
     position: absolute; /*Poder manipular los hijos de esta clase o div*/
-    bottom:0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 `;
 
 const ImgsContenidoMarcoInstrucciones = styled.img`

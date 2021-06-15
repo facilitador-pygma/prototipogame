@@ -43,6 +43,15 @@ const TituloEscenaAvatar = styled.p`
     text-align: center;
 `;
 
+const BoxAvatars = styled.div`
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 200px;
+`;
+
 const BoxInputEscenaAvatar = styled.div`
     position: absolute;
     bottom: 67px;
@@ -74,6 +83,7 @@ const InputEscenaAvatar = styled.input`
 export { BoxMarcoSeleccionAvatar,
          ImgMarcoSeleccionAvatar,
          BoxTituloEscenaAvatar,
+         BoxAvatars,
          BoxInputEscenaAvatar,
          TituloEscenaAvatar,
          InputEscenaAvatar };

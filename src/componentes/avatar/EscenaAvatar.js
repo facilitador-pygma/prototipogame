@@ -9,6 +9,8 @@ import React from 'react';
 import LogoG4T from './../logog4t/LogoG4T';
 import Menu from './../menu/Menu';
 import Footer from './../footer/Footer';
+import AvatarUno from './avatarUno/AvatarUno';
+import AvatarDos from './avatarDos/AvatarDos';
 
 //Imagenes
 import logoEmpresa from './../../assets/img/Logo_LoginyRegistro.png';
@@ -25,18 +27,12 @@ import { BoxLogoG4T,
 import { BoxMarcoSeleccionAvatar,
          ImgMarcoSeleccionAvatar,
          BoxTituloEscenaAvatar,
+         BoxAvatars,
          BoxInputEscenaAvatar,
          TituloEscenaAvatar,
          InputEscenaAvatar } from './../../elementos/StyledEscenaAvatar';
 
-const EscenaAvatar = ({ estadoSeleccionAvatar, cambiarEstadoSeleccionAvatar,  mostrarFooterLanding, mostrarFooterAvatar}) => {
-
-    //Define la funcion pasarEscenaUsuarios
-    const pasarEscenaRetos = (e) => {
-        e.stopPropagation(); //Detiene efecto burbuja si se presenta
-        cambiarEstadoSeleccionAvatar( {...estadoSeleccionAvatar, landing: 'false', usuarios: 'false', home: 'false', retos: 'true' } ); //Cambia el estado de la escenas en App.js
-        console.log('cambiando estado desde la seleccion del avatar');
-    }
+const EscenaAvatar = ({ estadoSeleccionAvatar, cambiarEstadoSeleccionAvatar,  mostrarFooterLanding, mostrarFooterAvatar, estadoEscogerAvatar, cambiarEstadoEscogerAvatar }) => {
 
     return(  
         <>
@@ -53,10 +49,32 @@ const EscenaAvatar = ({ estadoSeleccionAvatar, cambiarEstadoSeleccionAvatar,  mo
                 <Menu />
 
                 <BoxMarcoSeleccionAvatar>
-                    <ImgMarcoSeleccionAvatar src = {cajaSeleccionAvatar} onClick= {pasarEscenaRetos}/>
+                    <ImgMarcoSeleccionAvatar src = {cajaSeleccionAvatar} />
                     <BoxTituloEscenaAvatar>
                         <TituloEscenaAvatar>selecciona tu avatar</TituloEscenaAvatar>
                     </BoxTituloEscenaAvatar>
+                    
+                    <BoxAvatars>
+
+                        <AvatarUno 
+                            estadoSeleccionAvatar= { estadoSeleccionAvatar }
+                            cambiarEstadoSeleccionAvatar = { cambiarEstadoSeleccionAvatar }
+
+                            estadoEscogerAvatar = { estadoEscogerAvatar }
+                            cambiarEstadoEscogerAvatar= { cambiarEstadoEscogerAvatar }
+                        />
+
+                        <AvatarDos 
+                            estadoSeleccionAvatar= { estadoSeleccionAvatar }
+                            cambiarEstadoSeleccionAvatar = { cambiarEstadoSeleccionAvatar }
+
+                            estadoEscogerAvatar = { estadoEscogerAvatar }
+                            cambiarEstadoEscogerAvatar= { cambiarEstadoEscogerAvatar }
+                        />
+
+                    </BoxAvatars>
+                    
+
                     <BoxInputEscenaAvatar>
                         <InputEscenaAvatar type= "text" placeholder= "Escribe un nombre"/>
                     </BoxInputEscenaAvatar>
