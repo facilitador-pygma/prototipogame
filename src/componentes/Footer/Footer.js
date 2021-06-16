@@ -20,7 +20,7 @@ import imgFooter from '../../assets/img/Mensaje_Mapa.png';
 
 
 
-const Footer = ( {mostrarFooterLanding, mostrarFooterAvatar, mostrarFooterRetos, mostrarFooterInstrucciones} ) => {
+const Footer = ( {mostrarFooterLanding, mostrarFooterAvatar, mostrarFooterRetos, mostrarFooterInstrucciones, mostrarFooterReto1} ) => {
 
     return( //mostrarFooterLanding === 'true' , mostrarFooterLanding === 'false' && mostrarFooterAvatar === 'true' 
     
@@ -35,7 +35,7 @@ const Footer = ( {mostrarFooterLanding, mostrarFooterAvatar, mostrarFooterRetos,
                 
                     { mostrarFooterLanding === 'true' && 
                         <TextoFooter>!bienvenidos!<br/> {/*Es un p, se usa los estilos del elemento StyledInicio.js*/}
-                            <TextoFooter2>edi sera tu gran aliado para potenciar tu talento en la industria 4.0</TextoFooter2>{/*Es un span, se usa los estilos del elemento StyledInicio.js*/}
+                            <TextoFooter2>edi el robot, será tu gran aliado para potenciar tu talento en la industria 4.0</TextoFooter2>{/*Es un span, se usa los estilos del elemento StyledInicio.js*/}
                         </TextoFooter>
                     }
 
@@ -72,6 +72,30 @@ const Footer = ( {mostrarFooterLanding, mostrarFooterAvatar, mostrarFooterRetos,
                       mostrarFooterAvatar === 'false' &&
                       mostrarFooterRetos === 'false' &&
                       mostrarFooterInstrucciones === 'true' &&
+                        <>
+                            <Indicadores 
+                                textoIndicador = "avance"    
+                            />
+
+                            <Indicadores 
+                                textoIndicador = "llaves"    
+                            />
+
+                            <Indicadores 
+                                textoIndicador = "Pruebas"    
+                            />
+
+                            <Indicadores 
+                                textoIndicador = "estrellas"    
+                            />
+                        </>
+                    }
+
+                    { mostrarFooterLanding === 'false' &&
+                      mostrarFooterAvatar === 'false' &&
+                      mostrarFooterRetos === 'false' &&
+                      mostrarFooterInstrucciones === 'false' &&
+                      mostrarFooterReto1 === 'true' &&
                         <>
                             <Indicadores 
                                 textoIndicador = "avance"    

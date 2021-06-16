@@ -7,6 +7,8 @@ import React from 'react';
 
 //Componentes
 import LogoG4T from './../../logog4t/LogoG4T';
+import Menu from './../../menu/Menu';
+import Footer from './../../footer/Footer';
 
 //Imagenes
 import logoEmpresa from './../../../assets/img/Logo_LoginyRegistro.png';
@@ -32,7 +34,7 @@ import { BoxPrueba,
          BoxImgCentralPrueba } from './../../../elementos/StyledRetoUno';
 
 
-const EscenaRetoUno = ( { mostrarAvatar1, mostrarAvatar2 } ) => {
+const EscenaRetoUno = ( { mostrarFooterLanding, mostrarFooterAvatar, mostrarFooterRetos, mostrarFooterInstrucciones, mostrarFooterReto1, mostrarAvatar1, mostrarAvatar2 } ) => {
     return ( 
 
         <>
@@ -45,6 +47,8 @@ const EscenaRetoUno = ( { mostrarAvatar1, mostrarAvatar2 } ) => {
                 <BoxLogoEmpresa>
                     <ImgLogoEmpresa src= { logoEmpresa } />
                 </BoxLogoEmpresa>
+
+                <Menu />
 
                 <BoxPrueba>
                     <ImgBoxPrueba src = {fondoPrueba}/>
@@ -68,6 +72,14 @@ const EscenaRetoUno = ( { mostrarAvatar1, mostrarAvatar2 } ) => {
                     </BoxContenidoPrueba>
 
                 </BoxPrueba>
+
+                <Footer 
+                    mostrarFooterLanding= { mostrarFooterLanding }
+                    mostrarFooterAvatar= { mostrarFooterAvatar }
+                    mostrarFooterRetos = { mostrarFooterRetos }
+                    mostrarFooterInstrucciones= { mostrarFooterInstrucciones }
+                    mostrarFooterReto1 = { mostrarFooterReto1 }
+                />
 
             </section> 
             
