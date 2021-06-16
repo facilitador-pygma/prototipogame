@@ -118,10 +118,10 @@ const BotonIngresarInstrucciones = styled.button`
     height: 20px; /*Da una altura al boton */
     line-height: 20px; /*Importante para que el contendido quede centrado */
     width: 100px; /*Usa la mitad del ancho de su contenedor o BoxFormulario */
-    background: radial-gradient(#1e90ff,#006ad1); /*Color de fondo*/
-    color: #29003b; /*Color de letra*/ 
+    background: linear-gradient(#007dc3,#30bad3); /*Color de fondo*/
+    color: #290a4c; /*Color de letra*/ 
     font-size: 16px; /*Tamaño de letra*/
-    font-weight: bold; /*Negrita*/
+    font-weight: 700; /*Negrita*/
     letter-spacing: 0.5px; /*Espacio entre letras*/
     border: none; /*Quita el borde que viene por decfecto en los botones de html */
     border-radius: 3px; /*Puntas redondeadas */
@@ -130,7 +130,7 @@ const BotonIngresarInstrucciones = styled.button`
     transition: 0.1s ease all; /*Pequeña transicion para el cambio de cualquier propiedad como efecto */
 
     &:hover{ /*Cuando pasen el cursor por encima del boton */
-        box-shadow: 3px 0 30px rgba(163,163,163, 1); /*Coloca una sombra */
+        box-shadow: 3px 0 5px rgba(163,163,163, 1); /*Coloca una sombra */
     }
 `;
 

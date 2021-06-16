@@ -18,7 +18,7 @@ const AvatarDos = ( { estadoSeleccionAvatar, cambiarEstadoSeleccionAvatar, estad
      //Define la funcion pasarEscenaUsuarios
      const pasarEscenaRetos = (e) => {
         e.stopPropagation(); //Detiene efecto burbuja si se presenta
-        cambiarEstadoSeleccionAvatar( {...estadoSeleccionAvatar, landing: 'false', usuarios: 'false', home: 'false', retos: 'true' } ); //Cambia el estado de la escenas en App.js
+        cambiarEstadoSeleccionAvatar( {...estadoSeleccionAvatar, landing: 'false', usuarios: 'false', avatar: 'false', retos: 'true' } ); //Cambia el estado de la escenas en App.js
         console.log('cambiando estado desde la seleccion del avatar 1');
         cambiarEstadoEscogerAvatar( {...estadoEscogerAvatar, avatar1: 'false', avatar2: 'true' } );
         

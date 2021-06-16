@@ -39,8 +39,13 @@ import { BoxMarcoInstrucciones,
          BotonIngresarInstrucciones  } from './../../elementos/StyledInstrucciones';
 
 
-const EscenaInstrucciones = ( { mostrarFooterLanding, mostrarFooterAvatar, mostrarFooterRetos, mostrarFooterInstrucciones, mostrarAvatar1, mostrarAvatar2 } ) => {
+const EscenaInstrucciones = ( { estado, cambiarEstado, mostrarFooterLanding, mostrarFooterAvatar, mostrarFooterRetos, mostrarFooterInstrucciones, mostrarAvatar1, mostrarAvatar2 } ) => {
 
+        const IniciarJuego = (e) => {
+            e.preventDefault();
+            cambiarEstado( {...estado, landing: 'false', usuarios: 'false', avatar: 'false', retos: 'false', instruccionR1:'false', reto1: 'true' } ); //Cambia el estado de la escenas en App.js
+            console.log("Click en el boton ingresar al reto 1");
+        }
 
         return(  
             <>
@@ -78,12 +83,12 @@ const EscenaInstrucciones = ( { mostrarFooterLanding, mostrarFooterAvatar, mostr
                                     <BoxTextoInstrucciones>
                                         <TextoInstrucciones>
                                             El primer reto contará con un tiempo determinado. <br/><br/>
-                                            En el podrás recolectar de  1 a 4 estrellas dependiendo de que tan cerca estés de la respuesta correcta.
+                                            En él podrás recolectar de  1 a 4 estrellas dependiendo de que tan cerca estés de la respuesta correcta.
                                         </TextoInstrucciones>
                                     </BoxTextoInstrucciones>
 
                                     <BoxBotonInstrucciones>
-                                        <BotonIngresarInstrucciones type="button">Ingresar</BotonIngresarInstrucciones>
+                                        <BotonIngresarInstrucciones type="button" onClick={IniciarJuego}>Ingresar</BotonIngresarInstrucciones>
                                     </BoxBotonInstrucciones>
 
                                 </BoxCajaInstrucciones>

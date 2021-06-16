@@ -39,7 +39,7 @@ const EscenaReto = ( {  estadoSeleccionarReto, cambiarEstadoSeleccionReto, mostr
     //Define la funcion pasarEscenaUsuarios
     const pasarEscenaInstruccionReto = (e) => {
         e.stopPropagation(); //Detiene efecto burbuja si se presenta
-        cambiarEstadoSeleccionReto( {...estadoSeleccionarReto, landing: 'false', usuarios: 'false', home: 'false', retos: 'false', instruccionR1:'true' } ); //Cambia el estado de la escenas en App.js
+        cambiarEstadoSeleccionReto( {...estadoSeleccionarReto, landing: 'false', usuarios: 'false', avatar: 'false', retos: 'false', instruccionR1:'true' } ); //Cambia el estado de la escenas en App.js
         console.log('cambiando estado desde la seleccion del reto');
     }
 

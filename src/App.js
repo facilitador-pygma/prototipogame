@@ -12,6 +12,7 @@ import EscenaUsuarios from './componentes/usuarios/EscenaUsuarios';
 import EscenaAvatar from './componentes/avatar/EscenaAvatar';
 import EscenaRetos from './componentes/reto/EscenaReto';
 import EscenaInstrucciones from './componentes/instrucciones/EscenaInstrucciones';
+import EscenaRetoUno from './componentes/retos/escenaretouno/EscenaRetoUno';
 //import EscenaInicio from './componentes/home/EscenaHome';
 //import Menu from './componentes/menu/Menu';
 
@@ -20,12 +21,13 @@ const App = () =>{
   //Variables de estados
   const [escenasJuego, cambiarEscenasJuego] = useState ({ landing: 'true',
                                                           usuarios: null,
-                                                          home: null,
+                                                          avatar: null,
                                                           retos: null,
-                                                          instruccionR1: null, });
+                                                          instruccionR1: null,
+                                                          reto1: null, });
 
   const FooterLanding = escenasJuego.landing;
-  const FooterAvatar = escenasJuego.home;
+  const FooterAvatar = escenasJuego.avatar;
   const FooterRetos = escenasJuego.retos;
   const FooterInstrucciones = escenasJuego.instruccionR1;
 
@@ -50,7 +52,7 @@ const App = () =>{
                 component = { EscenaAvatar }/> 
             </Switch> 
           </div> 
-  </Router>   }*/}
+      </Router>   }*/}
 
       { escenasJuego.landing === 'true' &&
         <EscenaLanding 
@@ -72,7 +74,7 @@ const App = () =>{
 
       { escenasJuego.landing === 'false' &&
         escenasJuego.usuarios === 'false' &&
-        escenasJuego.home === 'true' &&
+        escenasJuego.avatar === 'true' &&
 
         <EscenaAvatar 
           estadoSeleccionAvatar= {escenasJuego}
@@ -88,7 +90,7 @@ const App = () =>{
 
       { escenasJuego.landing === 'false' &&
         escenasJuego.usuarios === 'false' &&
-        escenasJuego.home === 'false' &&
+        escenasJuego.avatar === 'false' &&
         escenasJuego.retos === 'true' &&
 
         <EscenaRetos
@@ -103,11 +105,14 @@ const App = () =>{
 
       { escenasJuego.landing === 'false' &&
         escenasJuego.usuarios === 'false' &&
-        escenasJuego.home === 'false' &&
+        escenasJuego.avatar === 'false' &&
         escenasJuego.retos === 'false' &&
         escenasJuego.instruccionR1 === 'true' &&
 
         <EscenaInstrucciones
+
+          estado= {escenasJuego}
+          cambiarEstado= {cambiarEscenasJuego}
 
           mostrarAvatar1= { AvatarUno }
           mostrarAvatar2= { AvatarDos }
@@ -120,7 +125,19 @@ const App = () =>{
       }
 
 
-      
+      { escenasJuego.landing === 'false' &&
+        escenasJuego.usuarios === 'false' &&
+        escenasJuego.avatar === 'false' &&
+        escenasJuego.retos === 'false' &&
+        escenasJuego.instruccionR1 === 'false' &&
+        escenasJuego.reto1 === 'true' &&
+
+        <EscenaRetoUno 
+          mostrarAvatar1= { AvatarUno }
+          mostrarAvatar2= { AvatarDos }
+        />           
+
+      }
 
     </>
   );

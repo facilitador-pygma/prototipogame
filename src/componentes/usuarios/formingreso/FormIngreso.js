@@ -63,7 +63,7 @@ const FormIngreso = ( {estadoFormIngreso, cambiarEstadoFormIngreso} ) => { //Se 
                 cambiarPassword({campo: '', valido: null});
 
                 //Agregar a la base de datos
-                cambiarEstadoFormIngreso( {...estadoFormIngreso, landing: 'false', usuarios: 'false', home: 'true'} );
+                cambiarEstadoFormIngreso( {...estadoFormIngreso, landing: 'false', usuarios: 'false', avatar: 'true'} );
                 console.log('cambiando estado desde el submit del formulario del login');
 
            }else{
