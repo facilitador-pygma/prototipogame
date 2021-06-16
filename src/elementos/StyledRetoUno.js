@@ -84,6 +84,80 @@ const BoxImgCentralPrueba = styled.div`
     width: 200px;
 `;
 
+const BoxLadoDerechoPrueba = styled.div`
+    position: relative; /*Poder manipular los hijos de esta clase o div*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+    padding: 10px;
+`;
+
+const TextoPreguntaRetoUno = styled.p`
+    color: #fff;
+    letter-spacing: 0.5px;
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 15px;
+`;
+
+const BoxFormularioChecked = styled.div`
+    position: relative; /*Poder manipular los hijos de esta clase o div*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+`;
+
+const BoxInputChecked = styled.div`
+    position: relative; /*Poder manipular los hijos de esta clase o div*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 10px;
+
+    input{
+        margin-right: 10px;
+    }
+`;
+
+const TextoInput = styled.p`
+    color: #fff;
+    letter-spacing: 0.5px;
+    font-size: 16px;
+`;
+
+const BoxBotonRespuesta = styled.div`
+    position: relative; /*Poder manipular los hijos de esta clase o div*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+`;
+
+const BotonEnviarRespuesta = styled.button`
+    height: 20px; /*Da una altura al boton */
+    line-height: 20px; /*Importante para que el contendido quede centrado */
+    width: 100px; /*Usa la mitad del ancho de su contenedor o BoxFormulario */
+    background: linear-gradient(#007dc3,#30bad3); /*Color de fondo*/
+    color: #290a4c; /*Color de letra*/ 
+    font-size: 16px; /*Tamaño de letra*/
+    font-weight: 700; /*Negrita*/
+    letter-spacing: 0.5px; /*Espacio entre letras*/
+    border: none; /*Quita el borde que viene por decfecto en los botones de html */
+    border-radius: 3px; /*Puntas redondeadas */
+    cursor: pointer; /*Convierte el cursor en tipo mano */
+
+    transition: 0.1s ease all; /*Pequeña transicion para el cambio de cualquier propiedad como efecto */
+
+    &:hover{ /*Cuando pasen el cursor por encima del boton */
+        box-shadow: 3px 0 5px rgba(163,163,163, 1); /*Coloca una sombra */
+    }
+`;
+
 export { BoxPrueba,
          ImgBoxPrueba,
          BoxContenidoPrueba,
@@ -92,4 +166,11 @@ export { BoxPrueba,
          ImgsContenidoBoxPrueba,
          BoxCentralPrueba,
          TextoRetoUno,
-         BoxImgCentralPrueba };
+         BoxImgCentralPrueba,
+         BoxLadoDerechoPrueba,
+         TextoPreguntaRetoUno,
+         BoxFormularioChecked,
+         BoxInputChecked,
+         TextoInput,
+         BoxBotonRespuesta,
+         BotonEnviarRespuesta };
