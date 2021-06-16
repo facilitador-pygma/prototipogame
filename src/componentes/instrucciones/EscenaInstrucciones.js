@@ -17,7 +17,7 @@ import cajaInstruccionesReto1 from './../../assets/img/Instrucciones_Reto1.png';
 import imgTemporizador from './../../assets/img/Tiempo_Reto1.png';
 import imgInstruccionReto1 from './../../assets/img/Avatar_Reto1.png';
 import avatarUno from './../../assets/img/G4T_Avatar_Galatea.png';
-import avatarDos from './../../assets/img/G4T_Avatar_EDI.png';
+import avatarDos from './../../assets/img/G4T_Avatar_EDI_ufo.png';
 
 //Elementos
 import { BoxLogoG4T,
