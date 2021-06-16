@@ -132,31 +132,37 @@ const EscenaRetoUno = ( { mostrarFooterLanding, mostrarFooterAvatar, mostrarFoot
                         <BoxLadoDerechoPrueba>
                             <TextoPreguntaRetoUno>Seleccione una opción:</TextoPreguntaRetoUno>
                             <div>
-                                <Label>
-                                    <BoxFormularioChecked>
-
+                               
+                                <BoxFormularioChecked>
+                                    <Label>
                                         <BoxInputChecked>
                                             <input type= "checkbox" name="respuesta1" id="respuesta1" checked= {seleccionarRespuesta1} onChange= {onChangeRespuesta1} />
                                             <TextoInput>31</TextoInput>
                                         </BoxInputChecked>
+                                    </Label>
 
+                                    <Label>
                                         <BoxInputChecked>
                                             <input type= "checkbox" name="respuesta2" id="respuesta2" checked= {seleccionarRespuesta2} onChange= {onChangeRespuesta2} />
                                             <TextoInput>23</TextoInput>
                                         </BoxInputChecked>
-
+                                    </Label>
+                                    
+                                    <Label>
                                         <BoxInputChecked>
                                             <input type= "checkbox" name="respuesta3" id="respuesta3" checked= {seleccionarRespuesta3} onChange= {onChangeRespuesta3} />
                                             <TextoInput>40</TextoInput>
                                         </BoxInputChecked>
+                                    </Label>
 
+                                    <Label>
                                         <BoxInputChecked>
                                             <input type= "checkbox" name="respuesta4" id="respuesta4" checked= {seleccionarRespuesta4} onChange= {onChangeRespuesta4} />
                                             <TextoInput>36</TextoInput>
                                         </BoxInputChecked>
+                                    </Label>
 
-                                    </BoxFormularioChecked>
-                                </Label>
+                                </BoxFormularioChecked>
                             </div>
 
                             <BoxBotonRespuesta>

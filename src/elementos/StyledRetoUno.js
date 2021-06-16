@@ -117,11 +117,9 @@ const BoxInputChecked = styled.div`
     align-items: center;
     justify-content: center;
 
-    margin-bottom: 10px;
-
     input{
         margin-right: 10px;
-    }
+    }    
 `;
 
 const TextoInput = styled.p`
