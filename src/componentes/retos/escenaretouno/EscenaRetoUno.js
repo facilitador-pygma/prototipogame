@@ -49,7 +49,7 @@ import { BoxPrueba,
          BotonEnviarRespuesta } from './../../../elementos/StyledRetoUno';
 
 
-const EscenaRetoUno = ( { mostrarFooterLanding, mostrarFooterAvatar, mostrarFooterRetos, mostrarFooterInstrucciones, mostrarFooterReto1, mostrarAvatar1, mostrarAvatar2 } ) => {
+const EscenaRetoUno = ( { estado, cambiarEstado, mostrarFooterLanding, mostrarFooterAvatar, mostrarFooterRetos, mostrarFooterInstrucciones, mostrarFooterReto1, mostrarAvatar1, mostrarAvatar2, cambiarPremiosEngranajes } ) => {
 
     //Estados
     const [seleccionarRespuesta1, cambiarSeleccionarRespuesta1] = useState (false);
@@ -81,25 +81,31 @@ const EscenaRetoUno = ( { mostrarFooterLanding, mostrarFooterAvatar, mostrarFoot
         e.preventDefault();
 
         if(seleccionarRespuesta1){
-            alert("Repuesta Incorrecta");
+            //alert("Repuesta Incorrecta");
             console.log("Repuesta Incorrecta");
+            cambiarPremiosEngranajes(3);
         }
 
         if(seleccionarRespuesta2){
-            alert("Repuesta Incorrecta");
-            console.log("Repuesta Incorrecta")
+            //alert("Repuesta Incorrecta");
+            console.log("Repuesta Incorrecta");
+            cambiarPremiosEngranajes(1);
         }
 
         if(seleccionarRespuesta3){
-            alert("Repuesta Correcta");
+            //alert("Repuesta Correcta");
             console.log("Repuesta Correcta");
+            cambiarPremiosEngranajes(4);
         }
 
         if(seleccionarRespuesta4){
-            alert("Repuesta Incorrecta");
-            console.log("Repuesta Incorrecta")
+            //alert("Repuesta Incorrecta");
+            console.log("Repuesta Incorrecta");
+            cambiarPremiosEngranajes(2);
         }
 
+        cambiarEstado( {...estado, landing: 'false', usuarios: 'false', avatar: 'false', retos: 'false', instruccionR1:'false', reto1: 'false', premio1: 'true' } ); //Cambia el estado de la escenas en App.js
+        console.log("Click en el boton enviar para validar la respuesta del reto 1");
     }
 
     return ( 
@@ -186,7 +192,7 @@ const EscenaRetoUno = ( { mostrarFooterLanding, mostrarFooterAvatar, mostrarFoot
                                     </BoxBotonRespuesta>
                                     
                                 </ContenidoPreguntaReto>
-                                
+
                             </BoxCajaInstrucciones>
 
                         </BoxLadoDerechoPrueba>

@@ -13,6 +13,7 @@ import EscenaAvatar from './componentes/avatar/EscenaAvatar';
 import EscenaRetos from './componentes/reto/EscenaReto';
 import EscenaInstrucciones from './componentes/instrucciones/EscenaInstrucciones';
 import EscenaRetoUno from './componentes/retos/escenaretouno/EscenaRetoUno';
+import EscenaRespuesta from './componentes/respuesta/EscenaRespuesta';
 //import EscenaInicio from './componentes/home/EscenaHome';
 //import Menu from './componentes/menu/Menu';
 
@@ -24,7 +25,8 @@ const App = () =>{
                                                           avatar: null,
                                                           retos: null,
                                                           instruccionR1: null,
-                                                          reto1: null, });
+                                                          reto1: null,
+                                                          premio1: null, });
 
   const FooterLanding = escenasJuego.landing;
   const FooterAvatar = escenasJuego.avatar;
@@ -37,6 +39,9 @@ const App = () =>{
 
   const AvatarUno = escogerAvatar.avatar1;
   const AvatarDos = escogerAvatar.avatar2;
+
+  const [ premiosEngranajes, cambiarPremiosEngranajes ] = useState (null);
+ 
 
   
   return(
@@ -133,7 +138,11 @@ const App = () =>{
         escenasJuego.instruccionR1 === 'false' &&
         escenasJuego.reto1 === 'true' &&
 
-        <EscenaRetoUno 
+        <EscenaRetoUno
+
+          estado= {escenasJuego}
+          cambiarEstado= {cambiarEscenasJuego}
+        
           mostrarAvatar1= { AvatarUno }
           mostrarAvatar2= { AvatarDos }
 
@@ -143,6 +152,22 @@ const App = () =>{
           mostrarFooterInstrucciones = { FooterInstrucciones }
           mostrarFooterReto1 = { FooterRetoUno }
 
+          cambiarPremiosEngranajes = {cambiarPremiosEngranajes}
+
+        />           
+
+      }
+
+      { escenasJuego.landing === 'false' &&
+        escenasJuego.usuarios === 'false' &&
+        escenasJuego.avatar === 'false' &&
+        escenasJuego.retos === 'false' &&
+        escenasJuego.instruccionR1 === 'false' &&
+        escenasJuego.reto1 === 'false' &&
+        escenasJuego.premio1 === 'true' &&
+
+        <EscenaRespuesta 
+          mostrarPremiosEngranajes= {premiosEngranajes}
         />           
 
       }
