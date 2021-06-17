@@ -6,7 +6,7 @@
 import React from 'react';
 
 //Imagenes
-import avatarUno from './../../../assets/img/G4T_Avatar_Galatea.png';
+import avatarUno from './../../../assets/img/Selección_Galatea.png';
 
 //Elementos
 import { BoxImgAvatar,

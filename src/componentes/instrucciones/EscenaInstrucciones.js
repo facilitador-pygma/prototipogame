@@ -15,9 +15,8 @@ import logoEmpresa from './../../assets/img/Logo_LoginyRegistro.png';
 import puertaInstruccionReto1 from './../../assets/img/Puerta_Reto1.png';
 import cajaInstruccionesReto1 from './../../assets/img/Instrucciones_Reto1.png';
 import imgTemporizador from './../../assets/img/Tiempo_Reto1.png';
-import imgInstruccionReto1 from './../../assets/img/Avatar_Reto1.png';
-import avatarUno from './../../assets/img/G4T_Avatar_Galatea.png';
-import avatarDos from './../../assets/img/G4T_Avatar_EDI_ufo.png';
+import avatarUno from './../../assets/img/Selección_Galatea.png';
+import avatarDos from './../../assets/img/Selección_EDI.png';
 
 //Elementos
 import { BoxLogoG4T,

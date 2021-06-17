@@ -6,7 +6,7 @@
 import React from 'react';
 
 //Imagenes
-import avatarDos from './../../../assets/img/G4T_Avatar_EDI_ufo.png';
+import avatarDos from './../../../assets/img/Selección_EDI.png';
 
 //Elementos
 import { BoxImgAvatar,

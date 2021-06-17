@@ -12,14 +12,19 @@ import Footer from './../../footer/Footer';
 
 //Imagenes
 import logoEmpresa from './../../../assets/img/Logo_LoginyRegistro.png';
-import fondoPrueba from './../../../assets/img/Caja_Selección avatar.png';
-import avatarUno from './../../../assets/img/G4T_Avatar_Galatea.png';
-import avatarDos from './../../../assets/img/G4T_Avatar_EDI_ufo.png';
+import fondoPrueba from './../../../assets/img/cuadro_Reto 1.png';
+import avatarUno from './../../../assets/img/Selección_Galatea.png';
+import avatarDos from './../../../assets/img/Selección_EDI.png';
+import imgTemporizador from './../../../assets/img/Tiempo_Reto1.png';
+import cajaPreguntasRetos from './../../../assets/img/gráfico_instrucciones.png';
 
 import imgRetoUno from './../../../assets/img/reto1_prueba.png';
 
 //Elementos
 import { Label } from './../../../elementos/StyledFormularios';
+
+import { BoxImgTemporizador,
+         BoxCajaInstrucciones } from './../../../elementos/StyledInstrucciones';
 
 import { BoxLogoG4T,
          BoxLogoEmpresa,
@@ -35,6 +40,7 @@ import { BoxPrueba,
          TextoRetoUno,
          BoxImgCentralPrueba,
          BoxLadoDerechoPrueba,
+         ContenidoPreguntaReto,
          TextoPreguntaRetoUno,
          BoxFormularioChecked,
          BoxInputChecked,
@@ -130,44 +136,58 @@ const EscenaRetoUno = ( { mostrarFooterLanding, mostrarFooterAvatar, mostrarFoot
                         </BoxCentralPrueba>
 
                         <BoxLadoDerechoPrueba>
-                            <TextoPreguntaRetoUno>Seleccione una opción:</TextoPreguntaRetoUno>
-                            <div>
-                               
-                                <BoxFormularioChecked>
-                                    <Label>
-                                        <BoxInputChecked>
-                                            <input type= "checkbox" name="respuesta1" id="respuesta1" checked= {seleccionarRespuesta1} onChange= {onChangeRespuesta1} />
-                                            <TextoInput>31</TextoInput>
-                                        </BoxInputChecked>
-                                    </Label>
 
-                                    <Label>
-                                        <BoxInputChecked>
-                                            <input type= "checkbox" name="respuesta2" id="respuesta2" checked= {seleccionarRespuesta2} onChange= {onChangeRespuesta2} />
-                                            <TextoInput>23</TextoInput>
-                                        </BoxInputChecked>
-                                    </Label>
+                            <BoxImgTemporizador>
+                                <ImgsContenidoBoxPrueba src= { imgTemporizador }/>
+                            </BoxImgTemporizador >
+
+                            <BoxCajaInstrucciones>
+                                <ImgsContenidoBoxPrueba src= { cajaPreguntasRetos }/>
+
+                                <ContenidoPreguntaReto>
+
+                                    <TextoPreguntaRetoUno>Seleccione una opción:</TextoPreguntaRetoUno>
+                                    <div>
                                     
-                                    <Label>
-                                        <BoxInputChecked>
-                                            <input type= "checkbox" name="respuesta3" id="respuesta3" checked= {seleccionarRespuesta3} onChange= {onChangeRespuesta3} />
-                                            <TextoInput>40</TextoInput>
-                                        </BoxInputChecked>
-                                    </Label>
+                                        <BoxFormularioChecked>
+                                            <Label>
+                                                <BoxInputChecked>
+                                                    <input type= "checkbox" name="respuesta1" id="respuesta1" checked= {seleccionarRespuesta1} onChange= {onChangeRespuesta1} />
+                                                    <TextoInput>31</TextoInput>
+                                                </BoxInputChecked>
+                                            </Label>
 
-                                    <Label>
-                                        <BoxInputChecked>
-                                            <input type= "checkbox" name="respuesta4" id="respuesta4" checked= {seleccionarRespuesta4} onChange= {onChangeRespuesta4} />
-                                            <TextoInput>36</TextoInput>
-                                        </BoxInputChecked>
-                                    </Label>
+                                            <Label>
+                                                <BoxInputChecked>
+                                                    <input type= "checkbox" name="respuesta2" id="respuesta2" checked= {seleccionarRespuesta2} onChange= {onChangeRespuesta2} />
+                                                    <TextoInput>23</TextoInput>
+                                                </BoxInputChecked>
+                                            </Label>
+                                            
+                                            <Label>
+                                                <BoxInputChecked>
+                                                    <input type= "checkbox" name="respuesta3" id="respuesta3" checked= {seleccionarRespuesta3} onChange= {onChangeRespuesta3} />
+                                                    <TextoInput>40</TextoInput>
+                                                </BoxInputChecked>
+                                            </Label>
 
-                                </BoxFormularioChecked>
-                            </div>
+                                            <Label>
+                                                <BoxInputChecked>
+                                                    <input type= "checkbox" name="respuesta4" id="respuesta4" checked= {seleccionarRespuesta4} onChange= {onChangeRespuesta4} />
+                                                    <TextoInput>36</TextoInput>
+                                                </BoxInputChecked>
+                                            </Label>
 
-                            <BoxBotonRespuesta>
-                                <BotonEnviarRespuesta type="button" onClick= {validarRespuesta}>Enviar</BotonEnviarRespuesta>
-                            </BoxBotonRespuesta>
+                                        </BoxFormularioChecked>
+                                    </div>
+
+                                    <BoxBotonRespuesta>
+                                        <BotonEnviarRespuesta type="button" onClick= {validarRespuesta}>Enviar</BotonEnviarRespuesta>
+                                    </BoxBotonRespuesta>
+                                    
+                                </ContenidoPreguntaReto>
+                                
+                            </BoxCajaInstrucciones>
 
                         </BoxLadoDerechoPrueba>
                        

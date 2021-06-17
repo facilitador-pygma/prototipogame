@@ -39,12 +39,12 @@ const BoxLadoIzquierdoPrueba = styled.div`
     display: flex;
     align-items: center;
     padding: 10px;
-    width: 180px;
+    width: 240px;
 `;
 
 const BoxImgLadoIzquierdoPrueba = styled.div`
     position: absolute; /*Poder manipular los hijos de esta clase o div*/
-    bottom: 0;
+    bottom: 20px;
     left: 0;
     width: 100%;
 `;
@@ -73,7 +73,7 @@ const TextoRetoUno = styled.p`
     color: #fff;
     letter-spacing: 0.5px;
     text-align: center;
-    font-size: 16px;
+    font-size: 24px;
     margin-bottom: 15px;
 `;
 
@@ -81,7 +81,7 @@ const BoxImgCentralPrueba = styled.div`
     position: relative; /*Poder manipular los hijos de esta clase o div*/
     top: 0;
     left: 0;
-    width: 200px;
+    width: 250px;
 `;
 
 const BoxLadoDerechoPrueba = styled.div`
@@ -92,6 +92,18 @@ const BoxLadoDerechoPrueba = styled.div`
 
     flex-direction: column;
     padding: 10px;
+`;
+
+const ContenidoPreguntaReto = styled.div`
+    position: absolute; /*Poder manipular los hijos de esta clase o div*/
+    display: flex; /*Coloca una al lado del otro lo elementos hijos*/
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+
+    flex-direction: column;
+    padding: 5px 10px;
 `;
 
 const TextoPreguntaRetoUno = styled.p`
@@ -166,6 +178,7 @@ export { BoxPrueba,
          TextoRetoUno,
          BoxImgCentralPrueba,
          BoxLadoDerechoPrueba,
+         ContenidoPreguntaReto,
          TextoPreguntaRetoUno,
          BoxFormularioChecked,
          BoxInputChecked,
