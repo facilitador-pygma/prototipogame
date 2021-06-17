@@ -166,7 +166,10 @@ const App = () =>{
         escenasJuego.reto1 === 'false' &&
         escenasJuego.premio1 === 'true' &&
 
-        <EscenaRespuesta 
+        <EscenaRespuesta
+
+          mostrarAvatar1= { AvatarUno }
+          mostrarAvatar2= { AvatarDos }
           mostrarPremiosEngranajes= {premiosEngranajes}
         />           
 
