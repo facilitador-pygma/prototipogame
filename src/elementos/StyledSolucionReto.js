@@ -53,6 +53,13 @@ const BoxImgCentralSolucion = styled.div`
     width: 100px;
 `;
 
+const TextoInfoSolucionReto = styled.p`
+    color: #fff;
+    text-align: left;
+    font-size: 12px;
+    margin-bottom: 5px;
+`;
+
 const BoxTextoOpciones = styled.div`
     position: relative;
     display: flex;
@@ -61,7 +68,7 @@ const BoxTextoOpciones = styled.div`
 
     flex-direction: column;
 
-    margin: 20px 0;
+    margin: 10px 0;
 `;
 
 const TextoOpciones = styled.p`
@@ -81,5 +88,6 @@ export { TituloEscenaSolucion,
          BoxImgCentralSolucion,
          TextoGanador,
          TextoNumeroEngranaje,
+         TextoInfoSolucionReto,
          BoxTextoOpciones,
          TextoOpciones };

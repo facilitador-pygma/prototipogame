@@ -36,10 +36,8 @@ import { BoxPrueba,
          BoxImgLadoIzquierdoPrueba,
          ImgsContenidoBoxPrueba,
          BoxCentralPrueba,
-         BoxImgCentralPrueba,
          BoxLadoDerechoPrueba,
          ContenidoPreguntaReto,
-         TextoPreguntaRetoUno,
          BoxBotonRespuesta,
          BotonEnviarRespuesta } from './../../elementos/StyledRetoUno';
 
@@ -49,11 +47,12 @@ import { TituloEscenaSolucion,
          BoxImgCentralSolucion,
          TextoGanador,
          TextoNumeroEngranaje,
+         TextoInfoSolucionReto,
          BoxTextoOpciones,
          TextoOpciones } from './../../elementos/StyledSolucionReto';
 
 
-const EscenaRespuesta = ({ mostrarPremiosEngranajes, mostrarAvatar1, mostrarAvatar2}) => {
+const EscenaRespuesta = ({ ResultadoEngranajes, mostrarAvatar1, mostrarAvatar2, TextoResultadoReto}) => {
     return ( 
 
         <>
@@ -81,11 +80,11 @@ const EscenaRespuesta = ({ mostrarPremiosEngranajes, mostrarAvatar1, mostrarAvat
                         </BoxLadoIzquierdoPrueba>
 
                         <BoxCentralPrueba>
-                            <TituloEscenaSolucion>solucion del reto</TituloEscenaSolucion>
+                            <TituloEscenaSolucion>solución del reto</TituloEscenaSolucion>
 
                             <BoxTextoImgCentral>
-                                <TextoFelicitacion>¡ Muy Bien ! <br/><br/><TextoGanador>Ganaste:</TextoGanador></TextoFelicitacion>
-                                <TextoNumeroEngranaje>x{mostrarPremiosEngranajes}</TextoNumeroEngranaje>
+                                <TextoFelicitacion>{TextoResultadoReto} <br/><br/><TextoGanador>Ganaste:</TextoGanador></TextoFelicitacion>
+                                <TextoNumeroEngranaje>x{ResultadoEngranajes}</TextoNumeroEngranaje>
                                 <BoxImgCentralSolucion>
                                     <ImgsContenidoBoxPrueba src= {imgEngranaje} />
                                 </BoxImgCentralSolucion>
@@ -103,16 +102,21 @@ const EscenaRespuesta = ({ mostrarPremiosEngranajes, mostrarAvatar1, mostrarAvat
 
                                 <ContenidoPreguntaReto>
 
-                                    <TextoPreguntaRetoUno>Decide tu siguiente aventura:</TextoPreguntaRetoUno>
+                                    <TextoInfoSolucionReto>
+                                        Lo hiciste muy bien, ahora debes tomar una decisión importante. <br/>
+                                        Puedes cambiar uno de tus engranajes para construir un amigo que te ayudará a 
+                                        resolver los retos y encontrar las llaves, o puedes elegir seguir solo y 
+                                        resolver tú mismo todas las pruebas.
+                                    </TextoInfoSolucionReto>
 
                                     <BoxTextoOpciones>
-                                        <TextoOpciones>&#62;Construir un aliado&#60;</TextoOpciones>
+                                        <TextoOpciones>&#62;Construir un amigo&#60;</TextoOpciones>
                                         <TextoOpciones>&#62;Ir al siguiente reto&#60;</TextoOpciones>
                                     </BoxTextoOpciones>
                                     
-                                    <BoxBotonRespuesta>
+                                    {/*<BoxBotonRespuesta>
                                         <BotonEnviarRespuesta type="button">Continuar</BotonEnviarRespuesta>
-                                    </BoxBotonRespuesta>
+                                    </BoxBotonRespuesta>*/}
                                     
                                 </ContenidoPreguntaReto>
 

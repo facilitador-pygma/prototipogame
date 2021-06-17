@@ -40,9 +40,11 @@ const App = () =>{
   const AvatarUno = escogerAvatar.avatar1;
   const AvatarDos = escogerAvatar.avatar2;
 
-  const [ premiosEngranajes, cambiarPremiosEngranajes ] = useState (null);
+  const [ mostrarResultadosRetos, cambiarMostrarResultadosRetos ] = useState ( { numEngranajes: null,
+                                                                                 textResultadoReto: '', } );
  
-
+  const ResultadoEngranajes = mostrarResultadosRetos.numEngranajes;
+  const TextoResultadoReto = mostrarResultadosRetos.textResultadoReto;
   
   return(
     <>
@@ -152,7 +154,9 @@ const App = () =>{
           mostrarFooterInstrucciones = { FooterInstrucciones }
           mostrarFooterReto1 = { FooterRetoUno }
 
-          cambiarPremiosEngranajes = {cambiarPremiosEngranajes}
+          mostrarResultadosRetos = {mostrarResultadosRetos}
+          cambiarMostrarResultadosRetos = { cambiarMostrarResultadosRetos }
+
 
         />           
 
@@ -170,7 +174,8 @@ const App = () =>{
 
           mostrarAvatar1= { AvatarUno }
           mostrarAvatar2= { AvatarDos }
-          mostrarPremiosEngranajes= {premiosEngranajes}
+          ResultadoEngranajes= {ResultadoEngranajes}
+          TextoResultadoReto = { TextoResultadoReto }
         />           
 
       }

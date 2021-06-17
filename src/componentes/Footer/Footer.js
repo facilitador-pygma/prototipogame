@@ -63,7 +63,7 @@ const Footer = ( {mostrarFooterLanding, mostrarFooterAvatar, mostrarFooterRetos,
                             />
 
                             <Indicadores 
-                                textoIndicador = "estrellas"    
+                                textoIndicador = "engranajes"    
                             />
                         </>
                     }
@@ -86,7 +86,7 @@ const Footer = ( {mostrarFooterLanding, mostrarFooterAvatar, mostrarFooterRetos,
                             />
 
                             <Indicadores 
-                                textoIndicador = "estrellas"    
+                                textoIndicador = "engranajes"    
                             />
                         </>
                     }
@@ -110,7 +110,7 @@ const Footer = ( {mostrarFooterLanding, mostrarFooterAvatar, mostrarFooterRetos,
                             />
 
                             <Indicadores 
-                                textoIndicador = "estrellas"    
+                                textoIndicador = "engranajes"    
                             />
                         </>
                     }

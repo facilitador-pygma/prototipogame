@@ -49,7 +49,7 @@ import { BoxPrueba,
          BotonEnviarRespuesta } from './../../../elementos/StyledRetoUno';
 
 
-const EscenaRetoUno = ( { estado, cambiarEstado, mostrarFooterLanding, mostrarFooterAvatar, mostrarFooterRetos, mostrarFooterInstrucciones, mostrarFooterReto1, mostrarAvatar1, mostrarAvatar2, cambiarPremiosEngranajes } ) => {
+const EscenaRetoUno = ( { estado, cambiarEstado, mostrarFooterLanding, mostrarFooterAvatar, mostrarFooterRetos, mostrarFooterInstrucciones, mostrarFooterReto1, mostrarAvatar1, mostrarAvatar2, mostrarResultadosRetos, cambiarMostrarResultadosRetos } ) => {
 
     //Estados
     const [seleccionarRespuesta1, cambiarSeleccionarRespuesta1] = useState (false);
@@ -83,25 +83,25 @@ const EscenaRetoUno = ( { estado, cambiarEstado, mostrarFooterLanding, mostrarFo
         if(seleccionarRespuesta1){
             //alert("Repuesta Incorrecta");
             console.log("Repuesta Incorrecta");
-            cambiarPremiosEngranajes(3);
+            cambiarMostrarResultadosRetos( {...mostrarResultadosRetos, numEngranajes: 2, textResultadoReto: '¡¡Esta no es la respuesta correcta pero no es la más lejana, ganas dos engranajes!!'} );
         }
 
         if(seleccionarRespuesta2){
             //alert("Repuesta Incorrecta");
             console.log("Repuesta Incorrecta");
-            cambiarPremiosEngranajes(1);
+            cambiarMostrarResultadosRetos( {...mostrarResultadosRetos, numEngranajes: 1, textResultadoReto: '¡¡Esta no es la respuesta correcta y de hecho es la opción más lejana, pero ganas un engranaje!!'} );
         }
 
         if(seleccionarRespuesta3){
             //alert("Repuesta Correcta");
             console.log("Repuesta Correcta");
-            cambiarPremiosEngranajes(4);
+            cambiarMostrarResultadosRetos( {...mostrarResultadosRetos, numEngranajes: 4, textResultadoReto: '¡¡Esta es la respuesta correcta, ganas cuatro engranajes!!'} );
         }
 
         if(seleccionarRespuesta4){
             //alert("Repuesta Incorrecta");
             console.log("Repuesta Incorrecta");
-            cambiarPremiosEngranajes(2);
+            cambiarMostrarResultadosRetos( {...mostrarResultadosRetos, numEngranajes: 3, textResultadoReto: '¡¡Esta no es la respuesta correcta, pero es la más cercana, ganas tres engranajes!!'} );
         }
 
         cambiarEstado( {...estado, landing: 'false', usuarios: 'false', avatar: 'false', retos: 'false', instruccionR1:'false', reto1: 'false', premio1: 'true' } ); //Cambia el estado de la escenas en App.js
