@@ -2,7 +2,7 @@
 /*********** Importaciones ************/
 /**************************************/
 //Instaladas
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 const BoxMarcoInstrucciones = styled.div`
     position: relative; /*Poder manipular los hijos de esta clase o div*/

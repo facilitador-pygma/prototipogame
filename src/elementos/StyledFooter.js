@@ -2,7 +2,7 @@
 /*********** Importaciones ************/
 /**************************************/
 //Instaladas
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 const BoxFooter = styled.div`
     position: relative; /*Para poder ubicar el div en la parte inferior, usando bottom y left */

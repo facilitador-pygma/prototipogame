@@ -20,7 +20,7 @@ import imgFooter from '../../assets/img/Mensaje_Mapa.png';
 
 
 
-const Footer = ( {mostrarFooterLanding, mostrarFooterAvatar, mostrarFooterRetos, mostrarFooterInstrucciones, mostrarFooterReto1} ) => {
+const Footer = ( {mostrarFooterLanding, mostrarFooterAvatar, mostrarFooterRetos, mostrarFooterInstrucciones, mostrarFooterReto1, mostrarFooterSolucion} ) => {
 
     return( //mostrarFooterLanding === 'true' , mostrarFooterLanding === 'false' && mostrarFooterAvatar === 'true' 
     
@@ -96,6 +96,32 @@ const Footer = ( {mostrarFooterLanding, mostrarFooterAvatar, mostrarFooterRetos,
                       mostrarFooterRetos === 'false' &&
                       mostrarFooterInstrucciones === 'false' &&
                       mostrarFooterReto1 === 'true' &&
+                        <>
+                            <Indicadores 
+                                textoIndicador = "avance"    
+                            />
+
+                            <Indicadores 
+                                textoIndicador = "llaves"    
+                            />
+
+                            <Indicadores 
+                                textoIndicador = "Pruebas"    
+                            />
+
+                            <Indicadores 
+                                textoIndicador = "engranajes"    
+                            />
+                        </>
+                    }
+
+                    { mostrarFooterLanding === 'false' &&
+                      mostrarFooterAvatar === 'false' &&
+                      mostrarFooterRetos === 'false' &&
+                      mostrarFooterInstrucciones === 'false' &&
+                      mostrarFooterReto1 === 'false' &&
+                      mostrarFooterSolucion === 'true' &&
+
                         <>
                             <Indicadores 
                                 textoIndicador = "avance"    

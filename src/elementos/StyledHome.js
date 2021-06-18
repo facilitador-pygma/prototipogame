@@ -2,7 +2,7 @@
 /*********** Importaciones ************/
 /**************************************/
 //Instaladas
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 const BoxLogoG4T = styled.div`
     display: block;

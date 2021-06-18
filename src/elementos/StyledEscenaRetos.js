@@ -2,7 +2,7 @@
 /*********** Importaciones ************/
 /**************************************/
 //Instaladas
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 const BoxMarcoRetos = styled.div`
     position: absolute;

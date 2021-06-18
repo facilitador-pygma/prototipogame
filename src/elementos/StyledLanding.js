@@ -2,7 +2,7 @@
 /*********** Importaciones ************/
 /**************************************/
 //Instaladas
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 const Marco = styled.div`
     position: relative;

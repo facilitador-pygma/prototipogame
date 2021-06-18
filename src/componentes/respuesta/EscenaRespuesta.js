@@ -52,7 +52,7 @@ import { TituloEscenaSolucion,
          TextoOpciones } from './../../elementos/StyledSolucionReto';
 
 
-const EscenaRespuesta = ({ ResultadoEngranajes, mostrarAvatar1, mostrarAvatar2, TextoResultadoReto}) => {
+const EscenaRespuesta = ({ ResultadoEngranajes, TextoResultadoReto, mostrarFooterLanding, mostrarFooterAvatar, mostrarFooterRetos, mostrarFooterInstrucciones, mostrarFooterReto1, mostrarFooterSolucion, mostrarAvatar1, mostrarAvatar2}) => {
     return ( 
 
         <>
@@ -128,6 +128,15 @@ const EscenaRespuesta = ({ ResultadoEngranajes, mostrarAvatar1, mostrarAvatar2, 
                     </BoxContenidoPrueba>
 
                 </BoxPrueba>
+
+                <Footer 
+                    mostrarFooterLanding= { mostrarFooterLanding }
+                    mostrarFooterAvatar= { mostrarFooterAvatar }
+                    mostrarFooterRetos = { mostrarFooterRetos }
+                    mostrarFooterInstrucciones= { mostrarFooterInstrucciones }
+                    mostrarFooterReto1 = { mostrarFooterReto1 }
+                    mostrarFooterSolucion = { mostrarFooterSolucion }
+                />
 
             </section>
 

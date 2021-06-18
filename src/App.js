@@ -33,6 +33,7 @@ const App = () =>{
   const FooterRetos = escenasJuego.retos;
   const FooterInstrucciones = escenasJuego.instruccionR1;
   const FooterRetoUno = escenasJuego.reto1;
+  const FooterSolucionReto = escenasJuego.premio1;
 
   const [ escogerAvatar, cambiarEscogerAvatar ] = useState ({ avatar1: null,
                                                               avatar2: null, });
@@ -174,8 +175,17 @@ const App = () =>{
 
           mostrarAvatar1= { AvatarUno }
           mostrarAvatar2= { AvatarDos }
+
           ResultadoEngranajes= {ResultadoEngranajes}
           TextoResultadoReto = { TextoResultadoReto }
+
+          mostrarFooterLanding= { FooterLanding }
+          mostrarFooterAvatar= { FooterAvatar }
+          mostrarFooterRetos = { FooterRetos }
+          mostrarFooterInstrucciones = { FooterInstrucciones }
+          mostrarFooterReto1 = { FooterRetoUno }
+          mostrarFooterSolucion = { FooterSolucionReto }
+
         />           
 
       }
