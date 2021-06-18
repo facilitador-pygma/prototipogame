@@ -18,7 +18,7 @@ import avatarDos from './../../../assets/img/Selección_EDI.png';
 import imgTemporizador from './../../../assets/img/Tiempo_Reto1.png';
 import cajaPreguntasRetos from './../../../assets/img/gráfico_instrucciones.png';
 
-import imgRetoUno from './../../../assets/img/reto1_prueba.png';
+import imgRetoUno from './../../../assets/img/Reto3_copia 2.png';
 
 //Elementos
 import { Label } from './../../../elementos/StyledFormularios';
@@ -135,9 +135,9 @@ const EscenaRetoUno = ( { estado, cambiarEstado, mostrarFooterLanding, mostrarFo
                         </BoxLadoIzquierdoPrueba>
 
                         <BoxCentralPrueba>
-                            <TextoRetoUno>Contar la cantidad de cuadros y marcar la respuesta correcta</TextoRetoUno>
+                            <TextoRetoUno>Calcula la cantidad de cuadros y selecciona la respuesta correcta</TextoRetoUno>
                             <BoxImgCentralPrueba>
-                                <ImgsContenidoBoxPrueba src= {imgRetoUno} />
+                                <ImgsContenidoBoxPrueba src= { imgRetoUno } />
                             </BoxImgCentralPrueba>
                         </BoxCentralPrueba>
 

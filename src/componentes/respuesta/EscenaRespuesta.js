@@ -19,8 +19,6 @@ import imgTemporizador from './../../assets/img/Tiempo_Reto1.png';
 import cajaPreguntasRetos from './../../assets/img/gráfico_instrucciones.png';
 import imgEngranaje from './../../assets/img/Engranaje_premio.png';
 
-import imgRetoUno from './../../assets/img/reto1_prueba.png';
-
 //Elementos
 import { BoxImgTemporizador,
          BoxCajaInstrucciones } from './../../elementos/StyledInstrucciones';

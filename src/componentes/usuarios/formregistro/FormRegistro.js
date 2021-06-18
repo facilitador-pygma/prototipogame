@@ -108,10 +108,10 @@ const FormRegistro = () => {
                         cambiarEstadoInput= {cambiarIdentificacion}
 
                         tipo= "text"
-                        label= "Identificacion"
+                        label= "Identificación"
                         placeholder= "123456789"
                         name="identificacion"
-                        leyendaError= "La identificacion solo puede contener numeros y debe tener de 6 a 14 digitos"
+                        leyendaError= "La identificación solo puede contener números y debe tener de 6 a 14 dígitos"
                         expresionRegular= {expresiones.identificacion}
 
                     />
@@ -124,7 +124,7 @@ const FormRegistro = () => {
                         label= "Correo"
                         placeholder= "example@correo.com"
                         name="correo"
-                        leyendaError= "El correo solo puede tener letras, numeros, puntos, guion medio y guion bajo"
+                        leyendaError= "El correo solo puede tener letras, números, puntos, guin medio y guion bajo"
                         expresionRegular= {expresiones.correo}
 
                     />
@@ -145,7 +145,7 @@ const FormRegistro = () => {
                         { formularioRegistroValido === true &&
 
                             <MensajeExito> {/*Es un elemento p*/}
-                                El registro se envio con exito
+                                El registro se envió con éxito
                             </MensajeExito>
                             
                         } {/* Segun el valor que tenga este estado muestra un mensaje de exito */}

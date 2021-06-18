@@ -42,7 +42,7 @@ const Footer = ( {mostrarFooterLanding, mostrarFooterAvatar, mostrarFooterRetos,
                     { mostrarFooterLanding === 'false' &&
                       mostrarFooterAvatar === 'true' &&
                         <TextoFooter>!bienvenidos! ahora puedes elegir tu avatar<br/> {/*Es un p, se usa los estilos del elemento StyledInicio.js*/}
-                            <TextoFooter2>edi sera tu gran aliado para potenciar tu talento en la industria 4.0</TextoFooter2>{/*Es un span, se usa los estilos del elemento StyledInicio.js*/}
+                            <TextoFooter2>edi será tu gran aliado para potenciar tu talento en la industria 4.0</TextoFooter2>{/*Es un span, se usa los estilos del elemento StyledInicio.js*/}
                         </TextoFooter>
                     }
 

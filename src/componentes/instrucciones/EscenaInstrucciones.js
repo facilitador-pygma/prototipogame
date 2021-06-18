@@ -82,7 +82,7 @@ const EscenaInstrucciones = ( { estado, cambiarEstado, mostrarFooterLanding, mos
                                     <BoxTextoInstrucciones>
                                         <TextoInstrucciones>
                                             El primer reto contará con un tiempo determinado. <br/><br/>
-                                            En él podrás recolectar de  1 a 4 engranajes dependiendo de que tan cerca estés de la respuesta correcta.
+                                            En él, podrás recolectar de  1 a 4 engranajes dependiendo de que tan cerca estés de la respuesta correcta.
                                         </TextoInstrucciones>
                                     </BoxTextoInstrucciones>
 

@@ -98,7 +98,7 @@ const FormIngreso = ( {estadoFormIngreso, cambiarEstadoFormIngreso} ) => { //Se 
                         tipo= "text"
                         placeholder= "Usuario"
                         name="usuario"
-                        leyendaError= "El usuario debe ser de 4 a 16 digitos y solo puede contener numeros, letras y guion bajo"
+                        leyendaError= "El usuario debe ser de 4 a 16 dígitos y solo puede contener números, letras y guion bajo"
                         expresionRegular= {expresiones.usuario}
 
                     />
@@ -110,7 +110,7 @@ const FormIngreso = ( {estadoFormIngreso, cambiarEstadoFormIngreso} ) => { //Se 
                         tipo= "password"
                         placeholder= "Contraseña"
                         name="password"
-                        leyendaError= "La contraseña tiene que ser de 4 a 12 digitos"
+                        leyendaError= "La contraseña tiene que ser de 4 a 12 dí32gitos"
                         expresionRegular= {expresiones.password}
 
                     />
@@ -131,7 +131,7 @@ const FormIngreso = ( {estadoFormIngreso, cambiarEstadoFormIngreso} ) => { //Se 
                         { formularioIngresoValido === true &&
 
                             <MensajeExito> {/*Es un elemento p*/}
-                                El login se realizo correctamente 
+                                El login se realizó correctamente 
                             </MensajeExito> 
                             
                         } {/* Segun el valor que tenga este estado muestra un mensaje de exito */}
